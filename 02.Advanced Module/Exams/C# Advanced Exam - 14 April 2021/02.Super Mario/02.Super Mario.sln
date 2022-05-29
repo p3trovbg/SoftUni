@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Super Mario", "02.Super Mario.csproj", "{062DC379-AD77-4892-BCA3-901F1709F4AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{062DC379-AD77-4892-BCA3-901F1709F4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062DC379-AD77-4892-BCA3-901F1709F4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062DC379-AD77-4892-BCA3-901F1709F4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062DC379-AD77-4892-BCA3-901F1709F4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F0D0CEC-2559-41C6-B857-C443CE7C4790}
+	EndGlobalSection
+EndGlobal
