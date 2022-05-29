@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles", "Vehicles\Vehicles.csproj", "{B3AFD8F9-1A76-4FEB-B1B9-5D76BBEEA714}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiding", "Raiding\Raiding.csproj", "{29D48E28-4073-4C6D-BA40-AAF949B5FD87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildFarm", "WildFarm\WildFarm.csproj", "{DC4B1ECF-5B85-4C11-B57C-5C5F44062A31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3AFD8F9-1A76-4FEB-B1B9-5D76BBEEA714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3AFD8F9-1A76-4FEB-B1B9-5D76BBEEA714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3AFD8F9-1A76-4FEB-B1B9-5D76BBEEA714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3AFD8F9-1A76-4FEB-B1B9-5D76BBEEA714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D48E28-4073-4C6D-BA40-AAF949B5FD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D48E28-4073-4C6D-BA40-AAF949B5FD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D48E28-4073-4C6D-BA40-AAF949B5FD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D48E28-4073-4C6D-BA40-AAF949B5FD87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC4B1ECF-5B85-4C11-B57C-5C5F44062A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC4B1ECF-5B85-4C11-B57C-5C5F44062A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC4B1ECF-5B85-4C11-B57C-5C5F44062A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC4B1ECF-5B85-4C11-B57C-5C5F44062A31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BB36C35-004F-4CFB-B468-E88CB1F18FD7}
+	EndGlobalSection
+EndGlobal
