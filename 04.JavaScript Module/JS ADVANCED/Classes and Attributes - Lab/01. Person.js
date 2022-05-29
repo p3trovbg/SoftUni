@@ -1,0 +1,14 @@
+class Person {
+    constructor(firstName, lastName, age ,email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+    }
+
+    toString() {
+        return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`
+    }
+}
+var person = new Person('Gosho', 'Petrov', 5, "go6o@abv.bg");
+console.log(person.toString());

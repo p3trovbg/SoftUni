@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "1b2d8383-636c-40e7-a58c-64f56665cce4",
+		"name": "HTTP and REST Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://restcountries.com/v2/all/?fields=name,region\n",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restcountries.com/v2/all/?fields=name,region\n",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"com"
+					],
+					"path": [
+						"v2",
+						"all",
+						""
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "name,region\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
