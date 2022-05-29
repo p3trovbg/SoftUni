@@ -394,3 +394,15 @@ pids
 
 # bower_components for testing
 bower_components
+
+.dvlp
+.npm
+node_modules
+.DS_Store
+/index.d.ts
+/index.js
+/index.mjs
+/browser.mjs
+/shared.js
+/shared.mjs
+/directives/
