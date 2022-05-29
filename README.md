@@ -1,3 +1,3 @@
-![Logo_Software_University_(SoftUni)_-_blue_background](https://user-images.githubusercontent.com/78408524/170858682-18a0cd86-3ff3-495c-b66f-e4bd138cf6da.png)
-# SoftUni
+![software-university-ltd-vector-logo](https://user-images.githubusercontent.com/78408524/170858705-b4a85e10-ea3d-4f76-87f7-347b5d51a15b.png)
+
 Exercise at SoftUni
