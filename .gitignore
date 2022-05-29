@@ -350,4 +350,12 @@ MigrationBackup/
 .ionide/
 
 #Additional 
-.zip
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
