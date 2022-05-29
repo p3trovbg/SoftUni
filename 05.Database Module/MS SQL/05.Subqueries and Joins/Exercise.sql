@@ -156,10 +156,17 @@ SELECT TOP(5)
 	ORDER BY c.CountryName
 
 --Ex.15
-SELECT 
-   cont.[ContinentCode]
-  ,c.[CurrencyCode]
-  ,c.COUNT()
-  FROM Continents cont
-  JOIN Countries c ON c.ContinentCode = cont.ContinentCode
+SELECT ContinentCode, CurrencyCode, Total AS CurrencyUsage
+  FROM (
+     SELECT 
+    	 c.[ContinentCode]
+    	,c.[CurrencyCode]
+    	,COUNT(c.[CurrencyCode]) AS [Total]
+    	,DENSE_RANK() OVER (PARTITION BY c.[ContinentCode] ORDER BY COUNT(c.[CurrencyCode]) DESC) AS [Ranked]
+     FROM Countries c
+	GROUP BY ContinentCode, CurrencyCode) AS k
+WHERE k.[Ranked] = 1 AND k.[Total] > 1
+ORDER BY ContinentCode
 
+
+--Ex.16
