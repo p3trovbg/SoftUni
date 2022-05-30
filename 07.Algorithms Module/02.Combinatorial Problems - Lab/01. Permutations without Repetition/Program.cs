@@ -1,24 +1,20 @@
 ﻿using System;
-using System.IO;
 
 namespace _01._Permutations_without_Repetition
 {
     class Program
     {
-        private static StreamWriter writer = new StreamWriter("permutations.txt", true);
         private static string[] elements;
         static void Main(string[] args)
         {
             elements = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             Permute(0);
-            writer.Close();
         }
 
         private static void Permute(int idx)
         {
-            if(idx >= elements.Length)
+            if (idx >= elements.Length)
             {
-                writer.WriteLine(string.Join(string.Empty, elements));
                 Console.WriteLine(string.Join(string.Empty, elements));
                 return;
             }

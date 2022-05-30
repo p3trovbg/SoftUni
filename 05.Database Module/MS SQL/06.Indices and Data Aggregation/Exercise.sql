@@ -88,4 +88,77 @@ SELECT
   GROUP BY DepositGroup, IsDepositExpired
   ORDER BY DepositGroup DESC
 
-  SELECT * FROM WizzardDeposits
+
+--Ex.12
+
+  SELECT SUM(Result.Total)
+    FROM (
+	  SELECT
+	  Host.DepositAmount - LEAD(host.DepositAmount, 1) OVER (ORDER BY Host.Id) AS Total
+	  FROM WizzardDeposits [Host]) AS [Result]
+
+--=======================================================
+USE SoftUni
+
+--Ex.13
+SELECT DepartmentId
+	  ,SUM(Salary) [TotalSum]
+  FROM Employees
+  GROUP BY DepartmentID
+  ORDER BY DepartmentID
+
+--Ex.14
+SELECT DepartmentId
+	  ,MIN(Salary) [MinimumSalary]
+  FROM Employees
+  WHERE DepartmentID IN(2, 5, 7) AND HireDate > '2000-01-01'
+  GROUP BY DepartmentID
+  ORDER BY DepartmentID
+
+--Ex.15
+SELECT * INTO NewTable
+		 FROM Employees
+		WHERE Salary > 30000
+
+DELETE FROM NewTable
+ WHERE ManagerID = 42
+
+ UPDATE NewTable
+ SET Salary = Salary + 5000
+ WHERE DepartmentID = 1;
+
+ SELECT DepartmentID, AVG(Salary)
+   FROM NewTable
+  GROUP BY DepartmentID
+
+
+--Ex.16
+SELECT DepartmentId
+	  ,MAX(Salary) [MaxSalary]
+  FROM Employees
+  GROUP BY DepartmentID
+  HAVING MAX(Salary) NOT BETWEEN 30000 AND 70000
+
+--Ex.17
+SELECT Count(*) [Count]
+  FROM Employees
+  WHERE ManagerID IS NULL
+
+--Ex.18
+SELECT DISTINCT Result.DepartmentID, Result.Salary
+  FROM ( SELECT DepartmentID
+			   ,Salary
+			   ,DENSE_RANK() OVER (PARTITION BY DepartmentID ORDER BY Salary DESC) AS [Ranked]
+				   FROM Employees) AS Result
+ WHERE Result.Ranked = 3
+
+
+
+--Ex.19
+SELECT TOP(10) FirstName, LastName, DepartmentID
+  FROM Employees e
+  WHERE Salary > (SELECT AVG(Salary)
+					FROM Employees
+					WHERE DepartmentID = e.DepartmentID
+					GROUP BY DepartmentID)
+ORDER BY DepartmentID
