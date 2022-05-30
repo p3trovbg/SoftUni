@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Permutations with Repet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Variations without Repetition", "03. Variations without Repetition\03. Variations without Repetition.csproj", "{789CFA92-320B-4353-9E6E-88C1145874A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Variations with Repetition", "04. Variations with Repetition\04. Variations with Repetition.csproj", "{9151F491-3755-4273-8694-17D722490682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Combinations without Repetition", "05. Combinations without Repetition\05. Combinations without Repetition.csproj", "{78936311-2796-4464-81A8-25964E5466D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Combinations with Repetition", "06. Combinations with Repetition\06. Combinations with Repetition.csproj", "{63926D89-0F38-490D-9962-12890E526085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. N Choose K Count", "07. N Choose K Count\07. N Choose K Count.csproj", "{B0FDAB19-691E-4287-AE70-28A96E4085F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{789CFA92-320B-4353-9E6E-88C1145874A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{789CFA92-320B-4353-9E6E-88C1145874A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{789CFA92-320B-4353-9E6E-88C1145874A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9151F491-3755-4273-8694-17D722490682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9151F491-3755-4273-8694-17D722490682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9151F491-3755-4273-8694-17D722490682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9151F491-3755-4273-8694-17D722490682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78936311-2796-4464-81A8-25964E5466D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78936311-2796-4464-81A8-25964E5466D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78936311-2796-4464-81A8-25964E5466D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78936311-2796-4464-81A8-25964E5466D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63926D89-0F38-490D-9962-12890E526085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63926D89-0F38-490D-9962-12890E526085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63926D89-0F38-490D-9962-12890E526085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63926D89-0F38-490D-9962-12890E526085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FDAB19-691E-4287-AE70-28A96E4085F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FDAB19-691E-4287-AE70-28A96E4085F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FDAB19-691E-4287-AE70-28A96E4085F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FDAB19-691E-4287-AE70-28A96E4085F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
