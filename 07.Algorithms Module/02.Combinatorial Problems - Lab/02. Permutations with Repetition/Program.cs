@@ -16,7 +16,7 @@ namespace _02._Permutations_with_Repetition
         {
             if (idx >= elements.Length)
             {
-                Console.WriteLine(string.Join(string.Empty, elements));
+                Console.WriteLine(string.Join(" ", elements));
                 return;
             }
 
