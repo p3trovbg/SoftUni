@@ -7,6 +7,7 @@ namespace _03._Connected_Areas_in_Matrix
         private static int row;
         private static int col;
         private static char[,] matrix;
+        private static int totalAreas;
         static void Main(string[] args)
         {
             row = int.Parse(Console.ReadLine());
@@ -21,7 +22,19 @@ namespace _03._Connected_Areas_in_Matrix
                     matrix[i, j] = colElements[j];
                 }
             }
-            ;
+
+            FindAreas(0);
+            
+        }
+
+        private static void FindAreas(int row)
+        {
+            if(row >= matrix.GetLength(0))
+            {
+                return;
+            }
+
+            
         }
     }
 }
