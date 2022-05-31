@@ -6,6 +6,12 @@ Exercise at SoftUni
 <p align="left"> 
   <a href="https://softuni.bg/certificates/details/100273/0b43e777" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
-         <h3>Programming Basics</h3>
+         <h3>Programming Basics Module</h3>
+  </a>
+</p>
+<p align="left"> 
+  <a href="https://softuni.bg/certificates/details/111558/92a94dac" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>Fundamentals Module</h3>
   </a>
 </p>
