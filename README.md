@@ -2,4 +2,4 @@
 
 Exercise at SoftUni
 
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://softuni.bg/certificates/details/111558/92a94dac)  
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='Fundamentals Module(Certificate)' height='40'>](https://softuni.bg/certificates/details/111558/92a94dac)  
