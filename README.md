@@ -32,6 +32,13 @@ Exercise at SoftUni
 </p>
 
 <p align="left"> 
+  <a href="https://softuni.bg/certificates/details/133543/f30ff3db" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>Data Structure Module</h3>
+  </a>
+</p>
+
+<p align="left"> 
   <a href="https://softuni.bg/certificates/details/126454/0262ddda" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" 
          <h3>JS Advanced Module</h3>
