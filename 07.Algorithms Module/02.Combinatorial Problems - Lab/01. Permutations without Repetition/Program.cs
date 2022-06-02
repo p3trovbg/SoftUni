@@ -5,16 +5,19 @@ namespace _01._Permutations_without_Repetition
     class Program
     {
         private static string[] elements;
+        private static int totalPermutations;
         static void Main(string[] args)
         {
             elements = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             Permute(0);
+            Console.WriteLine(totalPermutations);
         }
 
         private static void Permute(int idx)
         {
             if (idx >= elements.Length)
             {
+                totalPermutations++;
                 Console.WriteLine(string.Join(string.Empty, elements));
                 return;
             }
