@@ -1,12 +1,11 @@
-﻿using SnakeGame.Core;
+﻿using SnakeGame.Core; 
 using SnakeGame.Core.Interfaces;
-using System;
 using System.Runtime.Versioning;
 
 namespace SnakeGame
 {
     [SupportedOSPlatform("windows")]
-    class StartUp
+    public class StartUp
     {
         static void Main(string[] args)
         {

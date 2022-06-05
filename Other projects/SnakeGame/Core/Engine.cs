@@ -1,4 +1,5 @@
-﻿using SnakeGame.Core.Interfaces;
+﻿using SnakeGame.Core.Common;
+using SnakeGame.Core.Interfaces;
 using SnakeGame.IO;
 using SnakeGame.IO.Interfaces;
 using SnakeGame.Models;
@@ -16,12 +17,16 @@ namespace SnakeGame.Core
         private IReader reader;
         private ICatcher catcher;
         private IPlayer player;
+        private IMusic music;
         public Engine()
         {
             writer = new Writer();
             reader = new Reader();
             catcher = new Catcher();
             player = new Player();
+
+            music = new Music();
+            music.PlayMusic();
         }
 
         public void Menu()
@@ -29,7 +34,7 @@ namespace SnakeGame.Core
             var settings = new Settings();
             settings.SetSettings();
             settings.DrawFrame();
-            settings.DrawMenu();
+            settings.DrawMenu();     
             var input = reader.ReadKey();
             if (input.Key == ConsoleKey.F1)
             {
@@ -40,9 +45,9 @@ namespace SnakeGame.Core
                 player.UpdatePoints();
                 Run();
             }
-            else if (input.Key == ConsoleKey.F2)
+            else if (input.Key == ConsoleKey.F9)
             {
-                Menu();
+                return;
             }
         }
 

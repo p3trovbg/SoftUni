@@ -3,6 +3,8 @@ using SnakeGame.IO;
 using System;
 using System.Runtime.Versioning;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SnakeGame
 {
@@ -18,8 +20,6 @@ namespace SnakeGame
         private const bool CursorVisible = false;
         private const string TitleGame = "SnakeGame v1.0";
         private Writer writer;
-        private int score = 0;
-
 
         public void SetSettings()
         {
@@ -92,6 +92,6 @@ namespace SnakeGame
             writer.SetCursorPosition(90, 37);
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             writer.WriteLine("By: George Petrov");
-        }
+        }        
     }
 }
