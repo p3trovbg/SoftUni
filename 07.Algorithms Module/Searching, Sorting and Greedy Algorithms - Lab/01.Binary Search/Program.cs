@@ -1,4 +1,6 @@
-﻿namespace _01.Binary_Search
+﻿using System;
+using System.Linq;
+namespace _01.Binary_Search
 {
     public class Program
     {
@@ -7,10 +9,11 @@
             var input = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
             int element = int.Parse(Console.ReadLine());
 
-            Binary_Search(input, element);
+            var result = Binary_Search(input, element);
+            Console.WriteLine(result);
         }
 
-        private static void Binary_Search(int[] input, int element)
+        private static int Binary_Search(int[] input, int element)
         {
             int leftPosition = 0;
             int rightPosition = input.Length - 1;
@@ -20,10 +23,9 @@
                 var middle = (leftPosition + rightPosition) / 2;
                 if(input[middle] == element)
                 {
-                    Console.WriteLine(middle);
-                    return;
+                    return middle;
                 }
-                else if(element > middle)
+                else if(element > input[middle])
                 {
                     leftPosition = middle + 1;
                 }
@@ -32,6 +34,8 @@
                     rightPosition = middle - 1;
                 }
             }
+
+            return -1;
         }
     }
 }
