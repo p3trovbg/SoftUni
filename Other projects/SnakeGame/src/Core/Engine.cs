@@ -23,14 +23,13 @@ namespace SnakeGame.Core
             writer = new Writer();
             reader = new Reader();
             catcher = new Catcher();
-            player = new Player();
-
             music = new Music();
             music.PlayMusic();
         }
 
         public void Menu()
         {
+            player = new Player();
             var settings = new Settings();
             settings.SetSettings();
             settings.DrawFrame();
@@ -48,6 +47,10 @@ namespace SnakeGame.Core
             else if (input.Key == ConsoleKey.F9)
             {
                 return;
+            }
+            else
+            {
+                Menu();
             }
         }
 
@@ -94,6 +97,10 @@ namespace SnakeGame.Core
                     Thread.Sleep(1200);
                     var answer = catcher.ErrorHandling(ex.Message);
                     if (answer == 1)
+                    {
+                        Menu();
+                    }
+                    else
                     {
                         Menu();
                     }
