@@ -2,6 +2,7 @@
 using SnakeGame.src.Commons;
 using System;
 using System.Drawing;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace SnakeGame
@@ -16,6 +17,7 @@ namespace SnakeGame
         public GameForm()
         {
             InitializeComponent();
+            StartButton.Enabled = false;
             KeyPreview = true;
             snake = new Snake();
             settings = new Settings();
@@ -27,15 +29,9 @@ namespace SnakeGame
         private void StartGame(object sender, EventArgs e)
         {
             SetInitialSettings();
-            SetPlayerName();
             gameTimer.Start();
         }
 
-
-        private void StopGame(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void UpdatePictureBox(object sender, PaintEventArgs e)
@@ -57,19 +53,18 @@ namespace SnakeGame
 
                 canvas.FillEllipse(snakeColour, new Rectangle
                     (
-                    snake.SnakeItems[i].X * settings.Width,
-                    snake.SnakeItems[i].Y * settings.Height,
-                    settings.Width, settings.Height
+                        snake.SnakeItems[i].X * settings.Width,
+                        snake.SnakeItems[i].Y * settings.Height,
+                        settings.Width, settings.Height
                     ));
             }
 
-
             canvas.FillEllipse(Brushes.DarkRed, new Rectangle
             (
-            food.X * settings.Width,
-            food.Y * settings.Height,
-            settings.Width, settings.Height
-            ));
+                food.X * settings.Width,
+                food.Y * settings.Height,
+                settings.Width, settings.Height
+            )); 
         }
 
         private void KeysDown(object sender, KeyEventArgs e)
@@ -130,8 +125,8 @@ namespace SnakeGame
                         if (snake.SnakeItems[i].X == snake.SnakeItems[j].X &&
                             snake.SnakeItems[i].Y == snake.SnakeItems[j].Y)
                         {
-                            gameTimer.Stop();
-                            SetInitialSettings();                       }
+                            RestartGame();
+                        }
                     }
                 }
                 else
@@ -141,6 +136,13 @@ namespace SnakeGame
                 }
             }
             Map.Invalidate();
+        }
+
+        private void RestartGame()
+        {
+            gameTimer.Stop();
+            applyNameButton.Visible = true;
+            SetInitialSettings();
         }
 
         private void EatFood()
@@ -157,33 +159,11 @@ namespace SnakeGame
 
             snake.SnakeItems.Add(body);
 
-            food = new CircleItem { X = rand.Next(2, settings.MaxWidth), Y = rand.Next(2, settings.MaxHeight) };
-        }
-
-        private void InputName(object sender, EventArgs e)
-        {
-            if(!string.IsNullOrEmpty(inputName.Text))
-            {
-                player.Name = inputName.Text;
-                inputName.Enabled = true;
-            }
-        }
-
-        private void SetPlayerName()
-        {
-            if (string.IsNullOrEmpty(inputName.Text))
-            {
-                txtInputName.Text = "You should add your nickname.";
-                StartButton.Enabled = true;
-                return;
-            }
-            else
-            {
-                txtPlayerName.Text = player.Name;
-                txtPlayerName.Visible = true;
-                txtInputName.Visible = false;
-                inputName.Visible = false;
-            }
+            food = new CircleItem 
+            { 
+                X = rand.Next(2, settings.MaxWidth),
+                Y = rand.Next(2, settings.MaxHeight) 
+            };
         }
 
         private void SetInitialSettings()
@@ -194,6 +174,18 @@ namespace SnakeGame
             StartButton.Enabled = false;
 
             player.Score = 0;
+        }
+
+        private void NameButton(object sender, EventArgs e)
+        {
+            if(fieldNickname.Text != string.Empty)
+            {
+                fieldNickname.BorderStyle = BorderStyle.None;
+                fieldNickname.ReadOnly = true;
+                fieldNickname.BackColor = Color.White;
+                applyNameButton.Visible = false;
+                StartButton.Enabled = true;
+            }
         }
     }
 }

@@ -34,9 +34,9 @@ namespace SnakeGame
             this.Map = new System.Windows.Forms.PictureBox();
             this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.inputName = new System.Windows.Forms.TextBox();
-            this.txtInputName = new System.Windows.Forms.Label();
-            this.txtPlayerName = new System.Windows.Forms.Label();
+            this.fieldNickname = new System.Windows.Forms.TextBox();
+            this.txtNickname = new System.Windows.Forms.Label();
+            this.applyNameButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@ namespace SnakeGame
             this.txtScore.AutoSize = true;
             this.txtScore.BackColor = System.Drawing.SystemColors.Info;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(578, 594);
+            this.txtScore.Location = new System.Drawing.Point(580, 73);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(90, 43);
             this.txtScore.TabIndex = 3;
@@ -77,50 +77,49 @@ namespace SnakeGame
             // 
             // gameTimer
             // 
-            this.gameTimer.Interval = 40;
+            this.gameTimer.Interval = 55;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
             // 
-            // inputName
+            // fieldNickname
             // 
-            this.inputName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.inputName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputName.Location = new System.Drawing.Point(586, 90);
-            this.inputName.Multiline = true;
-            this.inputName.Name = "inputName";
-            this.inputName.Size = new System.Drawing.Size(124, 95);
-            this.inputName.TabIndex = 5;
-            this.inputName.TextChanged += new System.EventHandler(this.InputName);
+            this.fieldNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fieldNickname.Location = new System.Drawing.Point(585, 172);
+            this.fieldNickname.Multiline = true;
+            this.fieldNickname.Name = "fieldNickname";
+            this.fieldNickname.Size = new System.Drawing.Size(192, 33);
+            this.fieldNickname.TabIndex = 4;
             // 
-            // txtInputName
+            // txtNickname
             // 
-            this.txtInputName.AutoSize = true;
-            this.txtInputName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInputName.Location = new System.Drawing.Point(580, 62);
-            this.txtInputName.Name = "txtInputName";
-            this.txtInputName.Size = new System.Drawing.Size(114, 25);
-            this.txtInputName.TabIndex = 6;
-            this.txtInputName.Text = "Insert name";
+            this.txtNickname.AutoSize = true;
+            this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNickname.Location = new System.Drawing.Point(580, 140);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(186, 29);
+            this.txtNickname.TabIndex = 5;
+            this.txtNickname.Text = "Your nickname";
             // 
-            // txtPlayerName
+            // applyNameButton
             // 
-            this.txtPlayerName.AutoSize = true;
-            this.txtPlayerName.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerName.Location = new System.Drawing.Point(575, 564);
-            this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(162, 30);
-            this.txtPlayerName.TabIndex = 7;
-            this.txtPlayerName.Text = "PlayerName";
-            this.txtPlayerName.Visible = false;
+            this.applyNameButton.BackColor = System.Drawing.Color.Lime;
+            this.applyNameButton.Font = new System.Drawing.Font("Papyrus", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applyNameButton.Location = new System.Drawing.Point(647, 221);
+            this.applyNameButton.Name = "applyNameButton";
+            this.applyNameButton.Size = new System.Drawing.Size(130, 34);
+            this.applyNameButton.TabIndex = 6;
+            this.applyNameButton.Text = "Apply name";
+            this.applyNameButton.UseVisualStyleBackColor = false;
+            this.applyNameButton.Click += new System.EventHandler(this.NameButton);
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(969, 658);
-            this.Controls.Add(this.txtPlayerName);
-            this.Controls.Add(this.txtInputName);
-            this.Controls.Add(this.inputName);
+            this.ClientSize = new System.Drawing.Size(784, 658);
+            this.Controls.Add(this.applyNameButton);
+            this.Controls.Add(this.txtNickname);
+            this.Controls.Add(this.fieldNickname);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.StartButton);
@@ -139,9 +138,9 @@ namespace SnakeGame
         private System.Windows.Forms.PictureBox Map;
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer gameTimer;
-        private System.Windows.Forms.TextBox inputName;
-        private System.Windows.Forms.Label txtInputName;
-        private System.Windows.Forms.Label txtPlayerName;
+        private System.Windows.Forms.TextBox fieldNickname;
+        private System.Windows.Forms.Label txtNickname;
+        private System.Windows.Forms.Button applyNameButton;
     }
 }
 
