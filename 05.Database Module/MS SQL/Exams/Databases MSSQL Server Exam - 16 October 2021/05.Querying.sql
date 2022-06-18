@@ -48,6 +48,43 @@ SELECT
   JOIN Addresses a ON a.Id = c.AddressId
   JOIN ClientsCigars cc ON cc.ClientId = c.Id
   JOIN Cigars cig ON cig.Id = cc.CigarId
-  WHERE a.ZIP NOT LIKE '%[^0-9]%'
-  GROUP BY c.FirstName, c.LastName, a.Id, a.Country, a.ZIP
-  ORDER BY FullName
+ WHERE a.ZIP NOT LIKE '%[^0-9]%'
+ GROUP BY c.FirstName, c.LastName, a.Id, a.Country, a.ZIP
+ ORDER BY FullName
+
+ --Problem 7
+ GO
+
+ CREATE FUNCTION udf_ClientWithCigars(@name VARCHAR(50))
+ RETURNS INT
+ AS
+ BEGIN 
+	DECLARE @cigars INT
+	SET @cigars = (SELECT COUNT(*)
+      FROM Clients c
+      JOIN ClientsCigars cc ON cc.ClientId = c.Id
+      WHERE c.FirstName = @name)
+	  RETURN @cigars
+ END
+
+ SELECT dbo.udf_ClientWithCigars('Betty')
+
+--Problem 8
+
+CREATE PROC usp_SearchByTaste(@taste VARCHAR(30))
+AS
+BEGIN	
+	SELECT 
+	 c.CigarName,
+	 CONCAT('$', c.PriceForSingleCigar) Price,
+	 t.TasteType,
+	 b.BrandName,
+	 CONCAT(s.Length, ' ', 'cm'),
+	 CONCAT(s.RingRange, ' ', 'cm')
+  FROM Cigars c
+  JOIN Tastes t ON t.Id = c.TastId
+  JOIN Brands b ON b.Id = c.BrandId
+  JOIN Sizes s ON s.Id = c.SizeId
+  WHERE t.TasteType = @taste
+  ORDER BY s.Length ASC, s.RingRange DESC	
+END
