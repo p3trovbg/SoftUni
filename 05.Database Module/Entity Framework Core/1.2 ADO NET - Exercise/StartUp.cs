@@ -11,6 +11,7 @@ namespace _1._2_ADO_NET___Exercise
             Console.WriteLine("Please write 2 if you want to connect with a database");
             Console.WriteLine("Please write 3 if you want to get villian names");
             Console.WriteLine("Please write 4 if you want to get minions and them owner");
+            Console.WriteLine("Please write 5 if you want to add minion to current villian");
             try
             {
                 var input = int.Parse(Console.ReadLine());
@@ -29,6 +30,9 @@ namespace _1._2_ADO_NET___Exercise
                         break;
                     case 4:
                         QueriesMethods.GetMinionNamesAndOwner();
+                        break;
+                    case 5:
+                        QueriesMethods.AddMinion();
                         break;
                     default:
                         break;

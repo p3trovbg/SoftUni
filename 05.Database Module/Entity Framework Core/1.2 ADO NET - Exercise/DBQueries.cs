@@ -37,7 +37,7 @@
               HAVING COUNT(mv.VillainId) > 3 
             ORDER BY COUNT(mv.VillainId)";
 
-        public const string GET_VILLIAN_WITH_ID = "SELECT Name FROM Villains WHERE Id = @Id";
+        public const string GET_VILLIAN_BY_ID = "SELECT Name FROM Villains WHERE Id = @Id";
 
         public const string GET_MINIONS_WITH_CURRENT_OWNER =
             @"SELECT ROW_NUMBER() OVER (ORDER BY m.Name) as RowNum,
@@ -47,5 +47,25 @@
                                     JOIN Minions As m ON mv.MinionId = m.Id
                                    WHERE mv.VillainId = @Id
                                 ORDER BY m.Name";
+
+        public const string GET_VILLAIN_BY_NAME = "SELECT Id FROM Villains WHERE Name = @Name";
+
+        public const string GET_MINION_BY_ID = "SELECT Id FROM Minions WHERE Name = @Name";
+
+        public const string GET_TOWN_BY_NAME = "SELECT Id FROM Towns WHERE Name = @townName";
+
+        public const string ADD_VILLAIN = "INSERT INTO Villains(Name, EvilnessFactorId)  VALUES(@villainName, 4)";
+
+        public const string ADD_TOWN = "INSERT INTO Towns(Name) VALUES(@townName)";
+
+        public const string ADD_Minion = "INSERT INTO Minions(Name, Age, TownId) VALUES(@nam, @age, @townId)";
+
+        public const string ADD_MINIONS_VILLAINS = "INSERT INTO MinionsVillains(MinionId, VillainId) VALUES(@villainId, @minionId)";
+
+        public const string GET_MINION_BY_FULL_INFO = @"SELECT Id 
+          FROM Minions
+         WHERE [Name] = @name
+           AND [Age] = @age
+           AND [TownId] = @townId";
     }
 }
