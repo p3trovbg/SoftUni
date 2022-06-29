@@ -34,7 +34,10 @@ namespace SoftUni
             //Console.WriteLine(GetAddressesByTown(context));
 
             //09. Employee 147
-            Console.WriteLine(GetEmployee147(context));
+            //Console.WriteLine(GetEmployee147(context));
+
+            //10. Departments with More Than 5 Employees
+            Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
         }
 
         public static string GetEmployeesFullInformation(SoftUniContext context)
@@ -148,6 +151,33 @@ namespace SoftUni
             foreach (var project in employee.EmployeesProjects.OrderBy(x => x.Project.Name))
             {
                 sb.AppendLine($"{project.Project.Name}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
+        {
+            //Order them by employee count (ascending), then by department name (alphabetically). 
+            var departments = context.Departments
+                        .Include(e => e.Employees)
+                        .ThenInclude(m => m.Manager)
+                        .Where(e => e.Employees.Count() > 5)
+                        .OrderBy(x => x.Employees.Count())
+                        .ThenBy(d => d.Name)
+                        .ToList();
+
+            //For each department, print the department name and the manager’s first and last name on the first row. 
+            foreach (var department in departments)
+            {
+                sb.AppendLine($"{department.Name} - {department.Manager.FirstName} {department.Manager.LastName}");
+
+                foreach (var employee in department.Employees
+                                                   .OrderBy(x => x.FirstName)
+                                                   .ThenBy(x => x.LastName))
+                {
+                    sb.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
+                }
             }
 
             return sb.ToString().TrimEnd();
