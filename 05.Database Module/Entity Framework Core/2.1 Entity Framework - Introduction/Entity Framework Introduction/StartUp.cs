@@ -31,7 +31,10 @@ namespace SoftUni
             //Console.WriteLine(GetEmployeesInPeriod(context)); //33 points in judge.
 
             //08. Addresses by Town
-            Console.WriteLine(GetAddressesByTown(context));
+            //Console.WriteLine(GetAddressesByTown(context));
+
+            //09. Employee 147
+            Console.WriteLine(GetEmployee147(context));
         }
 
         public static string GetEmployeesFullInformation(SoftUniContext context)
@@ -121,20 +124,33 @@ namespace SoftUni
 
         public static string GetAddressesByTown(SoftUniContext context)
         {
-            //Find all addresses, ordered by the number of employees who live there(descending), 
-            //    then by town name(ascending), and finally by address text(ascending).Take only the first 10 addresses.
-            //    For each address return it in the format "<AddressText>, <TownName> - <EmployeeCount> employees"
             context.Addresses
                 .Include(e => e.Employees)
                 .Include(t => t.Town)
-                .OrderByDescending(x => x.Employees.Count())
+                .OrderByDescending(e => e.Employees.Count())
                 .ThenBy(x => x.Town.Name)
                 .ThenBy(a => a.AddressText)
                 .Take(10)
                 .ToList()
                 .ForEach(a => sb.AppendLine($"{a.AddressText}, {a.Town.Name} - {a.Employees.Count()} employees"));
 
-            return sb.ToString();
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetEmployee147(SoftUniContext context)
+        {
+            var employee = context.Employees
+                .Include(ep => ep.EmployeesProjects)
+                .ThenInclude(p => p.Project)
+                .FirstOrDefault(e => e.EmployeeId == 147);
+
+            sb.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
+            foreach (var project in employee.EmployeesProjects.OrderBy(x => x.Project.Name))
+            {
+                sb.AppendLine($"{project.Project.Name}");
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
