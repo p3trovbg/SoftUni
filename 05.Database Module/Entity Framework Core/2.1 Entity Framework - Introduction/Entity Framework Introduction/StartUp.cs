@@ -37,7 +37,22 @@ namespace SoftUni
             //Console.WriteLine(GetEmployee147(context));
 
             //10. Departments with More Than 5 Employees
-            Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
+            //Console.WriteLine(GetDepartmentsWithMoreThan5Employees(context));
+
+            //11. Find Latest 10 Projects
+            //Console.WriteLine(GetLatestProjects(context));
+
+            //12. Increase Salaries
+            //Console.WriteLine(IncreaseSalaries(context));
+
+            //13.13. Find Employees by First Name Starting With Sa
+            //Console.WriteLine(GetEmployeesByFirstNameStartingWithSa(context));
+
+            //14. Delete Project by Id
+            //Console.WriteLine(DeleteProjectById(context));
+
+            //15. Remove Town
+            
         }
 
         public static string GetEmployeesFullInformation(SoftUniContext context)
@@ -179,6 +194,85 @@ namespace SoftUni
                     sb.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
                 }
             }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetLatestProjects(SoftUniContext context)
+        {
+            context.Projects
+                .OrderByDescending(x => x.StartDate)
+                .Take(10)
+                .OrderBy(x => x.Name)
+                .ToList()
+                .ForEach(p =>
+                    {
+                        sb.AppendLine($"{p.Name}");
+                        sb.AppendLine($"{p.Description}");
+                        sb.AppendLine($"{p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)}");
+                    });
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string IncreaseSalaries(SoftUniContext context)
+        {
+            //Write a program that increase salaries of all employees that are in the Engineering, Tool Design, Marketing or
+            //Information Services department by 12 %.
+
+            context.Employees
+                    .Include(d => d.Departments)
+                    .Where(x => x.Department.Name == "Engineering" ||
+                                x.Department.Name == "Tool Design" ||
+                                x.Department.Name == "Marketing" ||
+                                x.Department.Name == "Information Services")
+                    .OrderBy(x => x.FirstName)
+                    .ThenBy(x => x.LastName)
+                    .ToList()
+                    .ForEach(e =>
+                    {
+                        e.Salary *= 1.12M;
+                        sb.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:F2})");
+                    });
+
+            context.SaveChanges();
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
+        {
+            context.Employees
+                .Where(e => e.FirstName.ToLower().StartsWith("sa"))
+                .OrderBy(x => x.FirstName)
+                .ThenBy(x => x.LastName)
+                .ToList()
+                .ForEach(e => sb.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:F2})"));
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string DeleteProjectById(SoftUniContext context)
+        {
+            //Let's delete the project with id 2. Then, take 10 projects and return their names, each on a new line.
+            //Remember to restore your database after this task.
+            var id = 2;
+            var projects = context.EmployeesProjects.Where(x => x.ProjectId == id);
+            context.EmployeesProjects.RemoveRange(projects);
+            context.SaveChanges();
+
+            var project = context.Projects.Find(id);
+            context.Projects.Remove(project);
+            context.SaveChanges();
+
+            context.Projects
+                .Take(10)
+                .ToList()
+                .ForEach(p => sb.AppendLine($"{p.Name}"));
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string RemoveTown(SoftUniContext context)
+        {
 
             return sb.ToString().TrimEnd();
         }
