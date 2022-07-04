@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _1._Student_System.Data.Models
+﻿namespace P01_StudentSystem.Data.Models
 {
-    internal class ResourceType
+    public enum ResourceType
     {
+        Video,
+        Presentation,
+        Document,
+        Other
     }
 }

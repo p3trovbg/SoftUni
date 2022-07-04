@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace _1._Student_System.Data.Models
+namespace P01_StudentSystem.Data.Models
 {
     public class Homework
     {

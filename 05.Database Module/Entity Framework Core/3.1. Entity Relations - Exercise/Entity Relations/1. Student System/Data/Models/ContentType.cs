@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _1._Student_System.Data.Models
+﻿namespace P01_StudentSystem.Data.Models 
 {
-    internal class ContentType
+    public enum ContentType
     {
+        //enum – can be Application, Pdf or Zip
+        Application,
+        Pdf,
+        Zip
     }
 }
