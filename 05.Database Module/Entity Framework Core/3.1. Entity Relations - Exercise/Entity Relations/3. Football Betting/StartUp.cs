@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using P03_FootballBetting.Data;
 
 namespace P03_FootballBetting 
 {
@@ -6,7 +7,8 @@ namespace P03_FootballBetting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var db = new FootballBettingContext();
+            db.Database.Migrate();
         }
     }
 }

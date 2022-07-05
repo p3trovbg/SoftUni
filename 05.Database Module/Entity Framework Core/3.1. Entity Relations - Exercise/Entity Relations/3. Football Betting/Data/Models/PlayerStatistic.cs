@@ -1,21 +1,27 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-
-namespace _3._Football_Betting.Data.Models
+namespace P03_FootballBetting.Data.Models
 {
     public class PlayerStatistic
     {
-        //GameId, PlayerId, ScoredGoals, Assists, MinutesPlayed
-        [Key]
+        [Required]
         public int GameId { get; set; }
+
+        [ForeignKey(nameof(GameId))]
+        public Game Game { get; set; }
+
+        [Required]
         public int PlayerId { get; set; }
+
+        [ForeignKey(nameof(PlayerId))]
+        public Player Player { get; set; }
 
         public int ScoredGoals { get; set; }
 
         public int Assists { get; set; }
 
-        public DateTime MinutesPlayed { get; set; }
+        public int MinutesPlayed { get; set; }
     }
 }

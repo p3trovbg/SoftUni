@@ -19,7 +19,7 @@ namespace _1._Student_System.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Course", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Course", b =>
                 {
                     b.Property<int>("CourseId")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace _1._Student_System.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Homework", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Homework", b =>
                 {
                     b.Property<int>("HomeworkId")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace _1._Student_System.Migrations
                     b.ToTable("HomeworkSubmissions");
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Resource", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Resource", b =>
                 {
                     b.Property<int>("ResourceId")
                         .ValueGeneratedOnAdd()
@@ -109,14 +109,14 @@ namespace _1._Student_System.Migrations
                     b.ToTable("Resources");
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Student", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Student", b =>
                 {
                     b.Property<int>("StudentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Birthday")
+                    b.Property<DateTime?>("Birthday")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -138,7 +138,7 @@ namespace _1._Student_System.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.StudentCourse", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.StudentCourse", b =>
                 {
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -153,39 +153,39 @@ namespace _1._Student_System.Migrations
                     b.ToTable("StudentCourses");
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Homework", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Homework", b =>
                 {
-                    b.HasOne("_1._Student_System.Data.Models.Course", "Course")
+                    b.HasOne("P01_StudentSystem.Data.Models.Course", "Course")
                         .WithMany("HomeworkSubmissions")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("_1._Student_System.Data.Models.Student", "Student")
+                    b.HasOne("P01_StudentSystem.Data.Models.Student", "Student")
                         .WithMany("HomeworkSubmissions")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.Resource", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.Resource", b =>
                 {
-                    b.HasOne("_1._Student_System.Data.Models.Course", "Course")
+                    b.HasOne("P01_StudentSystem.Data.Models.Course", "Course")
                         .WithMany("Resources")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("_1._Student_System.Data.Models.StudentCourse", b =>
+            modelBuilder.Entity("P01_StudentSystem.Data.Models.StudentCourse", b =>
                 {
-                    b.HasOne("_1._Student_System.Data.Models.Course", "Course")
+                    b.HasOne("P01_StudentSystem.Data.Models.Course", "Course")
                         .WithMany("StudentsEnrolled")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("_1._Student_System.Data.Models.Student", "Student")
+                    b.HasOne("P01_StudentSystem.Data.Models.Student", "Student")
                         .WithMany("CourseEnrollments")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
