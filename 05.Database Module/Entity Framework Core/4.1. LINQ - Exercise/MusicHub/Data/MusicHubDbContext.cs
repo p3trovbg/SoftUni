@@ -13,6 +13,17 @@
             : base(options)
         {
         }
+        public virtual DbSet<Album> Albums { get; set; }
+
+        public virtual DbSet<Performer> Performers { get; set; }
+
+        public virtual DbSet<Producer> Producers { get; set; }
+
+        public virtual DbSet<Song> Songs { get; set; }
+
+        public virtual DbSet<Writer> Writers { get; set; }
+
+        public virtual DbSet<SongPerformer> SongsPerformers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,7 +40,7 @@
 
             builder.Entity<SongPerformer>(sp =>
             {
-                sp.HasKey(sp => new { sp.PerformerId, sp.SongId });
+                sp.HasKey(sp => new { sp.SongId, sp.PerformerId });
             });
         }
     }

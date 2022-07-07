@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MusicHub.Data.Models
 {
+    [Table("SongsPerformers")]
     public class SongPerformer
     {
         [Required]

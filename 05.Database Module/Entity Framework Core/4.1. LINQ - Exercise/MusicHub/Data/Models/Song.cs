@@ -16,7 +16,7 @@ namespace MusicHub.Data.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string Name { get; set; }
 
         [Required]
@@ -28,7 +28,7 @@ namespace MusicHub.Data.Models
         [Required]
         public Genre Genre { get; set; }
 
-        public int AlbumId { get; set; }
+        public int? AlbumId { get; set; }
 
         [ForeignKey(nameof(AlbumId))]
         public virtual Album Album { get; set; }

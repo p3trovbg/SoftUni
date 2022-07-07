@@ -9,18 +9,18 @@ namespace MusicHub.Data.Models
     {
         public Performer()
         {
-            SongPerformers = new HashSet<SongPerformer>();
+            PerformerSongs = new HashSet<SongPerformer>();
         }
 
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string LastName { get; set; }
 
         [Required]
@@ -29,6 +29,6 @@ namespace MusicHub.Data.Models
         [Required]
         public decimal NetWorth { get; set; }
 
-        public virtual ICollection<SongPerformer> SongPerformers { get; set; }
+        public virtual ICollection<SongPerformer> PerformerSongs { get; set; }
     }
 }

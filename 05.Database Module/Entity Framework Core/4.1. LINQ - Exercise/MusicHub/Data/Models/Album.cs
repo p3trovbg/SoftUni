@@ -26,7 +26,7 @@ namespace MusicHub.Data.Models
 
         public decimal Price => Songs.Sum(x => x.Price);
 
-        public int ProducerId { get; set; }
+        public int? ProducerId { get; set; }
 
         [ForeignKey(nameof(ProducerId))]
         public virtual Producer Producer { get; set; }
