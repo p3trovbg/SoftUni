@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectedAreas", "Connected
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Cinema", "04. Cinema\04. Cinema.csproj", "{DEC590BA-813D-49EE-9F96-B7CBF21ADDE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. SchoolTeams", "05. SchoolTeams\05. SchoolTeams.csproj", "{CA288E86-287C-4E19-B327-CBEFC80C6E25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DEC590BA-813D-49EE-9F96-B7CBF21ADDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEC590BA-813D-49EE-9F96-B7CBF21ADDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEC590BA-813D-49EE-9F96-B7CBF21ADDE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA288E86-287C-4E19-B327-CBEFC80C6E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA288E86-287C-4E19-B327-CBEFC80C6E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA288E86-287C-4E19-B327-CBEFC80C6E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA288E86-287C-4E19-B327-CBEFC80C6E25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
