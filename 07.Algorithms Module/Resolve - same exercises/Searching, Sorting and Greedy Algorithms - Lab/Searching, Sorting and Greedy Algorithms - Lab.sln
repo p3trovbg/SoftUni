@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Binary Search", "01. Binary Search\01. Binary Search.csproj", "{4A3887E9-369A-4FD9-A5E0-0F40ABB04448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgortihms", "SortingAlgortihms\SortingAlgortihms.csproj", "{15A9971B-C976-43D2-BCD3-05F2E9C5E20D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4A3887E9-369A-4FD9-A5E0-0F40ABB04448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A3887E9-369A-4FD9-A5E0-0F40ABB04448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A3887E9-369A-4FD9-A5E0-0F40ABB04448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A9971B-C976-43D2-BCD3-05F2E9C5E20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A9971B-C976-43D2-BCD3-05F2E9C5E20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A9971B-C976-43D2-BCD3-05F2E9C5E20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A9971B-C976-43D2-BCD3-05F2E9C5E20D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
