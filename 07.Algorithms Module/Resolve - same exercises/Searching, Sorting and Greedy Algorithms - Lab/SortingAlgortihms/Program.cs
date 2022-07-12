@@ -21,7 +21,25 @@ namespace SortingAlgortihms
 
         private static void BubbleSort(int[] elements)
         {
-            throw new NotImplementedException();
+            bool isSorted = false;
+            while (!isSorted)
+            {
+                isSorted = true;
+
+                var count = 0;
+                for (int i = 0; i < elements.Length - count - 1; i++)
+                {
+                    var currentElement = elements[i];
+                    var nextElement = elements[i + 1];
+
+                    if(currentElement > nextElement)
+                    {
+                        count++;
+                        Swap(i, i + 1);
+                        isSorted = false;
+                    }
+                }
+            }
         }
 
         private static void SelectionSort(int[] elements)
