@@ -24,7 +24,7 @@ namespace _01._Permutations_without_Repetition
 
             Permute(idx + 1);
 
-            for (int i = idx + 1; i < elements.Length; i++)
+            for (int i = idx + 1; i < 2; i++)
             {
                 Swap(idx, i);
                 Permute(idx + 1);
