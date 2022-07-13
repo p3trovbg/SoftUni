@@ -15,8 +15,14 @@ namespace SortingAlgortihms
 
 
             //Selection sort -> SelectionSort(elements);
-            BubbleSort(elements);
+            //Bubble sort -> BubbleSort(elements);
+            InsertionSort(elements);
             Console.WriteLine(String.Join(" ", elements));
+        }
+
+        private static void InsertionSort(int[] elements)
+        {
+            throw new NotImplementedException();
         }
 
         private static void BubbleSort(int[] elements)
