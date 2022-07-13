@@ -14,43 +14,13 @@ namespace SortingAlgortihms
                         .ToArray();
 
 
-<<<<<<< .mine
-            //Selection sort -> SelectionSort(elements);
-            //Bubble sort -> BubbleSort(elements);
-            InsertionSort(elements);
-
-=======
             //Selection sort algorithm -> SelectionSort(elements);
             //Bubble sort algorithm -> BubbleSort(elements);
             //Insertion sort algorithm -> InsertionSort(elements);
             var sortArray = QuickSort(elements);
->>>>>>> .theirs
             Console.WriteLine(String.Join(" ", elements));
         }
 
-<<<<<<< .mine
-        private static void InsertionSort(int[] elements)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
         private static int[] QuickSort(int[] elements)
         {
             throw new NotImplementedException();
@@ -72,7 +42,6 @@ namespace SortingAlgortihms
             }
         }
 
->>>>>>> .theirs
         private static void BubbleSort(int[] elements)
         {
             bool isSorted = false;
@@ -86,7 +55,7 @@ namespace SortingAlgortihms
                     var currentElement = elements[i];
                     var nextElement = elements[i + 1];
 
-                    if(currentElement > nextElement)
+                    if (currentElement > nextElement)
                     {
                         count++;
                         Swap(i, i + 1);
