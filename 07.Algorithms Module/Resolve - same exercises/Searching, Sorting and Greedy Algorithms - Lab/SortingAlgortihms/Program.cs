@@ -17,7 +17,13 @@ namespace SortingAlgortihms
             //Selection sort algorithm -> SelectionSort(elements);
             //Bubble sort algorithm -> BubbleSort(elements);
             //Insertion sort algorithm -> InsertionSort(elements);
+            var sortArray = QuickSort(elements);
             Console.WriteLine(String.Join(" ", elements));
+        }
+
+        private static int[] QuickSort(int[] elements)
+        {
+            throw new NotImplementedException();
         }
 
         private static void InsertionSort(int[] elements)
