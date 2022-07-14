@@ -17,13 +17,44 @@ namespace SortingAlgortihms
             //Selection sort algorithm -> SelectionSort(elements);
             //Bubble sort algorithm -> BubbleSort(elements);
             //Insertion sort algorithm -> InsertionSort(elements);
-            var sortArray = QuickSort(elements);
+            QuickSort(0, elements.Length - 1);
             Console.WriteLine(String.Join(" ", elements));
         }
 
-        private static int[] QuickSort(int[] elements)
+        private static void QuickSort(int start, int endPointer)
         {
-            throw new NotImplementedException();
+            var leftPointer = start + 1;
+            var rightPointer = endPointer;
+
+            if(leftPointer >= rightPointer)
+            {
+                return;
+            }
+
+            var pivot = start;
+            while (leftPointer <= rightPointer)
+            {
+                if (elements[leftPointer] > elements[pivot] &&
+                    elements[rightPointer] < elements[pivot])
+                {
+                    Swap(leftPointer, rightPointer);
+                }
+
+                if (elements[leftPointer] <= elements[pivot])
+                {
+                    leftPointer++;
+                }
+
+                if (elements[rightPointer] >= elements[pivot])
+                {
+                    rightPointer--;
+                }
+            }
+
+            Swap(pivot, rightPointer);
+
+            QuickSort(start, rightPointer - 1);
+            QuickSort(rightPointer + 1, endPointer);
         }
 
         private static void InsertionSort(int[] elements)
