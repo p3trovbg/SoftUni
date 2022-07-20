@@ -16,7 +16,6 @@ namespace _01._Distance_Between_Vertices
             graph = new Dictionary<int, HashSet<int>>();
             FillGraph(n);
             FindAllPaths(pathCount);
-
         }
 
         private static void FindAllPaths(int pathCount)
