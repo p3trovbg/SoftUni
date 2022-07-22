@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Fibonacci", "01. Fibonacci\01. Fibonacci.csproj", "{617F99A1-0494-410A-AF8C-F6C7FF6CA9B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Move Down - Right", "02. Move Down - Right\02. Move Down - Right.csproj", "{CC7DEB56-47BA-4BC4-95A4-3179E0A74583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Longest Common Subsequence", "03. Longest Common Subsequence\03. Longest Common Subsequence.csproj", "{A2D78570-3C46-4A5B-B3AD-15FC18634BA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617F99A1-0494-410A-AF8C-F6C7FF6CA9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617F99A1-0494-410A-AF8C-F6C7FF6CA9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617F99A1-0494-410A-AF8C-F6C7FF6CA9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617F99A1-0494-410A-AF8C-F6C7FF6CA9B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7DEB56-47BA-4BC4-95A4-3179E0A74583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7DEB56-47BA-4BC4-95A4-3179E0A74583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7DEB56-47BA-4BC4-95A4-3179E0A74583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7DEB56-47BA-4BC4-95A4-3179E0A74583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D78570-3C46-4A5B-B3AD-15FC18634BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D78570-3C46-4A5B-B3AD-15FC18634BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D78570-3C46-4A5B-B3AD-15FC18634BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D78570-3C46-4A5B-B3AD-15FC18634BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEFAD5CF-E3CF-410D-B3D0-3EB447FCAC70}
+	EndGlobalSection
+EndGlobal
