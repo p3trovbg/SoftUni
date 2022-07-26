@@ -1,9 +1,7 @@
 ﻿namespace ProductShop.DTOs.Product
 {
     using System.ComponentModel.DataAnnotations;
-
     using Common;
-
     using Newtonsoft.Json;
 
     [JsonObject]

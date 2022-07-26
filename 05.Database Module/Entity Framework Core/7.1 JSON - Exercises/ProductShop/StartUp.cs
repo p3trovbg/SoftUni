@@ -11,6 +11,9 @@
 
     using AutoMapper;
     using Newtonsoft.Json;
+    using ProductShop.DTOs.Product;
+    using ProductShop.DTOs.Category;
+
     public class StartUp
     {
         private static string filePath;
@@ -19,7 +22,7 @@
         {
             Mapper.Initialize(cfg => cfg.AddProfile(typeof(ProductShopProfile)));
             ProductShopContext dbContext = new ProductShopContext();
-            InitializeDatasetFilePath("users.json");
+            InitializeDatasetFilePath("categories.json");
 
             //InitializeDatasetFilePath("categories.json");
             string inputJson = File.ReadAllText(filePath);
@@ -27,7 +30,10 @@
             //dbContext.Database.EnsureDeleted();
             //dbContext.Database.EnsureCreated();
 
-            var result = ImportUsers(dbContext, inputJson);
+            //Problem 1 var result = ImportUsers(dbContext, inputJson);
+            //Problem 2 var result = ImportProducts(dbContext, inputJson);
+
+            var result = ImportCategories(dbContext, inputJson);
             Console.WriteLine(result);
         }
 
@@ -54,6 +60,53 @@
             return $"Successfully imported {validUsers.Count}";
         }
 
+        //Problem 02 
+        public static string ImportProducts(ProductShopContext context, string inputJson)
+        {
+            var productsDTOs = JsonConvert.DeserializeObject<ImportProductDto[]>(inputJson);
+            var validProducts = new HashSet<Product>();
+
+            foreach (var pDto in productsDTOs)
+            {
+                if(!IsValid(pDto))
+                {
+                    continue;
+                }
+
+                var product = Mapper.Map<Product>(pDto);
+
+                validProducts.Add(product);
+            }
+
+            context.Products.AddRange(validProducts);
+            context.SaveChanges();
+
+            return $"Successfully imported {validProducts.Count}";
+
+        }
+
+        public static string ImportCategories(ProductShopContext context, string inputJson)
+        {
+            var categoriesDtos = JsonConvert.DeserializeObject<ImportCategoryDto[]>(inputJson);
+
+            var categories = new HashSet<Category>();
+            foreach (var cDto in categoriesDtos)
+            {
+                if(!IsValid(cDto))
+                {
+                    continue;
+                }
+
+                var category = Mapper.Map<Category>(cDto);
+
+                categories.Add(category);
+            }
+
+            context.Categories.AddRange(categories);
+            context.SaveChanges();
+
+            return $"Successfully imported {categories.Count}";
+        }
 
         private static void InitializeDatasetFilePath(string fileName)
         {
