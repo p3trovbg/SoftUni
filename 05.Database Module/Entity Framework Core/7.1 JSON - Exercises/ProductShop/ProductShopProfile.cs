@@ -20,25 +20,26 @@
             this.CreateMap<ImportCategoryProductDto, CategoryProduct>();
 
             this.CreateMap<Product, ExportProductsInRangeDto>()
-                .ForMember(d => d.SellerFullName, 
+                .ForMember(d => d.SellerFullName,
                     mo => mo.MapFrom(s => $"{s.Seller.FirstName} {s.Seller.LastName}"));
 
-            //Inner DTO
             this.CreateMap<Product, ExportUserSoldProductsDto>()
                 .ForMember(d => d.BuyerFirstName,
                     mo => mo.MapFrom(s => s.Buyer.FirstName))
                 .ForMember(d => d.BuyerLastName,
                     mo => mo.MapFrom(s => s.Buyer.LastName));
-            //Outer DTO
+
             this.CreateMap<User, ExportUsersWithSoldProductsDto>()
                 .ForMember(d => d.SoldProducts,
                     mo => mo.MapFrom(s => 
                         s.ProductsSold.Where(p => p.BuyerId.HasValue)));
 
             this.CreateMap<Product, ExportSoldProductShortInfoDto>();
+
             this.CreateMap<User, ExportSoldProductsFullInfoDto>()
                 .ForMember(d => d.SoldProducts,
                     mo => mo.MapFrom(s => s.ProductsSold.Where(p => p.BuyerId.HasValue)));
+
             this.CreateMap<User, ExportUsersWithFullProductInfoDto>()
                 .ForMember(d => d.SoldProductsInfo,
                     mo => mo.MapFrom(s => s));
