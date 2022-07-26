@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Topological Sorting", "02. Topological Sorting\02. Topological Sorting.csproj", "{BFAA7DD9-2DA5-4C30-98AC-8812B9EA4B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Shortest Path", "03. Shortest Path\03. Shortest Path.csproj", "{65BCCFB7-E287-4D5F-A984-A85D46727BC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFAA7DD9-2DA5-4C30-98AC-8812B9EA4B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFAA7DD9-2DA5-4C30-98AC-8812B9EA4B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFAA7DD9-2DA5-4C30-98AC-8812B9EA4B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFAA7DD9-2DA5-4C30-98AC-8812B9EA4B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BCCFB7-E287-4D5F-A984-A85D46727BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BCCFB7-E287-4D5F-A984-A85D46727BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BCCFB7-E287-4D5F-A984-A85D46727BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BCCFB7-E287-4D5F-A984-A85D46727BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C75AF3A8-18AA-4985-8630-7FE125034160}
+	EndGlobalSection
+EndGlobal
