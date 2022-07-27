@@ -9,6 +9,7 @@
     using Models;
 
     using AutoMapper;
+    using System;
 
     public class ProductShopProfile : Profile
     {
@@ -43,6 +44,16 @@
             this.CreateMap<User, ExportUsersWithFullProductInfoDto>()
                 .ForMember(d => d.SoldProductsInfo,
                     mo => mo.MapFrom(s => s));
+
+            this.CreateMap<Category, ExportCategoriesByProductDto>()
+                 .ForMember(d => d.ProductsCount,
+                 mo => mo.MapFrom(s => s.CategoryProducts.Count()))
+                 .ForMember(d => d.AveragePrice,
+                 mo => mo.MapFrom(s =>
+                                s.CategoryProducts.Average(x => x.Product.Price).ToString("f2")))
+                 .ForMember(d => d.TotalRevenue,
+                 mo => mo.MapFrom(s => 
+                                s.CategoryProducts.Sum(x => x.Product.Price).ToString("f2")));
         }
     }
 }

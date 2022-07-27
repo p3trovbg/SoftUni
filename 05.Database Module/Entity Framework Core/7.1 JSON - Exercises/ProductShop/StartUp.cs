@@ -16,6 +16,7 @@
     using ProductShop.DTOs.Category;
     using ProductShop.DTOs.CategoryProduct;
     using AutoMapper.QueryableExtensions;
+    using Newtonsoft.Json.Serialization;
 
     public class StartUp
     {
@@ -40,10 +41,12 @@
             //Problem 3 var result = ImportCategories(dbContext, inputJson);
             //Problem 4 var result = ImportCategoryProducts(dbContext, inputJson);
             //Problem 5 var json = GetProductsInRange(dbContext);
+            //Problem 6 var json = GetSoldProducts(dbContext);
+            //var json = GetCategoriesByProductsCount(dbContext);
 
-            var json = GetSoldProducts(dbContext);
+            var json = GetUsersWithProducts(dbContext);
 
-            InitializeOutputFilePath("users-sold-products.json");
+            InitializeOutputFilePath("users-and-products.json");
 
             File.WriteAllText(filePath, json);
         }
@@ -160,10 +163,63 @@
                 .Where(u => u.ProductsSold.Any(x => x.BuyerId.HasValue))
                 .OrderBy(x => x.LastName)
                 .ThenBy(x => x.FirstName)
-                .ProjectTo<ExportSoldProductsFullInfoDto>()
+                .ProjectTo<ExportUsersWithSoldProductsDto>()
                 .ToArray();
 
             return JsonConvert.SerializeObject(users, Formatting.Indented);
+        }
+
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var categories = context.Categories
+                        .OrderByDescending(x => x.CategoryProducts.Count())
+                        .ProjectTo<ExportCategoriesByProductDto>()
+                        .ToArray();
+
+
+            return JsonConvert.SerializeObject(categories, Formatting.Indented);
+        }
+
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                        .ToArray()
+                        .Where(x => x.ProductsSold.Any(p => p.BuyerId.HasValue))
+                        .Select(u => new
+                        {
+                            LastName = u.LastName,
+                            Age = u.Age,
+                            SoldProducts = new
+                            {
+                                Count = u.ProductsSold.Count(x => x.BuyerId.HasValue),
+                                Products = u.ProductsSold.Where(p => p.BuyerId.HasValue)
+                                .Select(p => new
+                                {
+                                    Name = p.Name,
+                                    Price = p.Price
+                                })
+                                .ToArray()
+                            }
+                        })
+                        .OrderByDescending(x => x.SoldProducts.Count);
+
+            var output = new
+            {
+                UsersCount = users.Count(),
+                Users = users
+            };
+
+            var settings = new JsonSerializerSettings()
+            {
+                ContractResolver = new DefaultContractResolver()
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                },
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore
+            };
+
+            return JsonConvert.SerializeObject(output, settings);
         }
 
         private static void InitializeDatasetFilePath(string fileName)
