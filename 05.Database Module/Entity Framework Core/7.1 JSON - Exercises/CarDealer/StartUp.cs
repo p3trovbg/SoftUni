@@ -14,6 +14,7 @@ using CarDealer.DTO.Part;
 using CarDealer.DTO.Car;
 using CarDealer.DTO.Customer;
 using CarDealer.DTO.Sale;
+using AutoMapper.QueryableExtensions;
 
 namespace CarDealer
 {
@@ -28,16 +29,24 @@ namespace CarDealer
                 cfg.AddProfile(typeof(CarDealerProfile));
             });
 
-            var contextDb = new CarDealerContext();
-            InitializeDatasetFilePath("sales.json");
-            var inputJson = File.ReadAllText(filePath);
+            var dbContext = new CarDealerContext();
+            //contextDb.Database.EnsureDeleted();
+            //contextDb.Database.EnsureCreated();
 
-            //Problem 01 -> var output = ImportSuppliers(contextDb, inputJson);
-            //Problem 02 -> var output = ImportParts(contextDb, inputJson);
-            //Problem 03 -> var output = ImportCars(contextDb, inputJson);
-            //Problem 04 -> var output = ImportCustomers(contextDb, inputJson);
-            var output = ImportSales(contextDb, inputJson);
-            Console.WriteLine(output);
+            InitializeOutputFilePath("sales-discounts.json");
+
+            //Problem 01 -> var output = ImportSuppliers(dbContext, inputJson);
+            //Problem 02 -> var output = ImportParts(dbContext, inputJson);
+            //Problem 03 -> var output = ImportCars(dbContext, inputJson);
+            //Problem 04 -> var output = ImportCustomers(dbContext, inputJson);
+            //Problem 05 -> var jsonOutput = GetOrderedCustomers(dbContext);
+            //Problem 06 -> var jsonOutput = GetCarsFromMakeToyota(dbContext);
+            //Problem 07 -> var jsonOutput = GetLocalSuppliers(dbContext);
+            //Problem 08 -> var jsonOutput = GetCarsWithTheirListOfParts(dbContext);
+            //Problem 09 -> var jsonOutput = GetTotalSalesByCustomer(dbContext);
+            var jsonOutput = GetSalesWithAppliedDiscount(dbContext);
+
+            File.WriteAllText(filePath, jsonOutput);
 
         }
 
@@ -127,6 +136,106 @@ namespace CarDealer
 
             return $"Successfully imported {cars.Count}.";
         }
+
+        public static string GetOrderedCustomers(CarDealerContext context)
+        {
+            var orderedCustomers = context.Customers
+                .OrderBy(x => x.BirthDate)
+                .ThenBy(x => x.IsYoungDriver)
+                .ProjectTo<ExportOrderedCustomerDto>()
+                .ToArray();
+
+                        
+            return JsonConvert.SerializeObject(orderedCustomers, Formatting.Indented);
+        }
+
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
+        {
+            var toyotaCars = context.Cars
+                        .Where(x => x.Make == "Toyota")
+                        .OrderBy(x => x.Model)
+                        .ThenByDescending(x => x.TravelledDistance)
+                        .ProjectTo<ExportToyotaCarDto>()
+                        .ToList();
+
+            return JsonConvert.SerializeObject(toyotaCars, Formatting.Indented);
+        }
+
+        public static string GetLocalSuppliers(CarDealerContext context)
+        {
+            var suppliers = context.Suppliers
+                .Where(x => x.IsImporter == false)
+                .ProjectTo<ExportLocalSupplierDto>()
+                .ToArray();
+
+            return JsonConvert.SerializeObject(suppliers, Formatting.Indented);
+        }
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Select(x => new 
+                {
+                    car = new ExportCarInfoDto
+                    {
+                        Make = x.Make,
+                        Model = x.Model, 
+                        TravelledDistance = x.TravelledDistance,
+                    },
+                    parts = x.PartCars
+                        .Select(x => new ExportPartInfoDto
+                        {
+                            Name = x.Part.Name,
+                            Price = $"{x.Part.Price:f2}"
+                        })
+                })
+                .ToList();
+
+            return JsonConvert.SerializeObject(cars, Formatting.Indented);
+        }
+
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .Where(c => c.Sales.Any())
+                .Select(x => new ExportCustomerBySalesDto
+                {
+                    FullName = x.Name,
+                    BoughtCars = x.Sales.Count,
+                    SpentMoney = x.Sales
+                                    .Sum(x => x.Car.PartCars
+                                                        .Sum(x => x.Part.Price))
+                })
+                .OrderByDescending(x => x.SpentMoney)
+                .ThenByDescending(x => x.BoughtCars);
+         
+
+            return JsonConvert.SerializeObject(customers, Formatting.Indented);
+        }
+
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            var sales = context.Sales
+                .Take(10)
+                .Select(x => new
+                {
+                    car = new ExportCarInfoDto
+                    {
+                        Make = x.Car.Make,
+                        Model = x.Car.Model,
+                        TravelledDistance = x.Car.TravelledDistance
+                    },
+                    customerName = x.Customer.Name,
+                    Discount = $"{x.Discount:f2}",
+                    price = $"{x.Car.PartCars.Sum(pc => pc.Part.Price):f2}",
+                    priceWithDiscount = @$"{x.Car.PartCars.Sum(pc => pc.Part.Price) -
+                                          ((x.Car.PartCars.Sum(pc => pc.Part.Price) *
+                                            x.Discount) / 100):f2}"
+
+                })
+                .ToArray();
+
+            return JsonConvert.SerializeObject(sales, Formatting.Indented);
+        }
         private static void InitializeDatasetFilePath(string fileName)
         {
             filePath =
@@ -136,7 +245,7 @@ namespace CarDealer
         private static void InitializeOutputFilePath(string fileName)
         {
             filePath =
-                Path.Combine(Directory.GetCurrentDirectory(), "../../../Results/", fileName);
+                Path.Combine(Directory.GetCurrentDirectory(), "../../../JsonResults/", fileName);
         }
 
         public static string ImportCustomers(CarDealerContext context, string inputJson)
