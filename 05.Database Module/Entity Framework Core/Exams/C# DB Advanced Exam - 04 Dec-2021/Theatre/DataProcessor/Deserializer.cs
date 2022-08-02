@@ -98,7 +98,7 @@
                     continue;
                 }
 
-                var tickets = new List<Ticket>();
+                var tickets = new List<ImportTicketDto>();
 
                 foreach (var ticketDto in dto.Tickets)
                 {
@@ -108,9 +108,10 @@
                         continue;
                     }
 
-                    tickets.Add(Mapper.Map<Ticket>(ticketDto));
+                    tickets.Add(ticketDto);
                 }
 
+                dto.Tickets = tickets;
                 theatres.Add(Mapper.Map<Theatre>(dto));
 
                 sb.AppendLine(String.Format(SuccessfulImportTheatre, dto.Name, tickets.Count));

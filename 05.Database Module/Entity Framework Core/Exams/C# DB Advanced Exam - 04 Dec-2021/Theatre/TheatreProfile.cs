@@ -1,7 +1,9 @@
 ﻿namespace Theatre
 {
     using AutoMapper;
+    using System.Linq;
     using Theatre.Data.Models;
+    using Theatre.DataProcessor.ExportDto;
     using Theatre.DataProcessor.ImportDto;
 
     class TheatreProfile : Profile
@@ -13,6 +15,22 @@
             this.CreateMap<ImportCastDto, Cast>();
             this.CreateMap<ImportTheatreDto, Theatre>();
             this.CreateMap<ImportTicketDto, Ticket>();
+
+            this.CreateMap<Ticket, ExportTicketDto>();
+            this.CreateMap<Theatre, ExportTheatreDto>()
+                .ForMember(d => d.TotalInCome,
+                t => t.MapFrom(x => x.Tickets
+                            .Where(x => x.RowNumber >= 1 && x.RowNumber <= 5)
+                            .Sum(x => x.Price)))
+                .ForMember(d => d.Tickets, 
+                t => t.MapFrom(x => x.Tickets
+                .Where(x => x.RowNumber >= 1 && x.RowNumber <= 5)
+                .OrderByDescending(x => x.Price)));
+
+            this.CreateMap<Cast, ExportActorDto>();
+            this.CreateMap<Play, ExportPlayDto>()
+            .ForMember(dest => dest.Rating, 
+            opt => opt.MapFrom(src => src.Rating == 0 ? "Premier" : src.Rating.ToString()));
         }
     }
 }
