@@ -28,9 +28,7 @@
                 .OrderByDescending(x => x.Price)));
 
             this.CreateMap<Cast, ExportActorDto>();
-            this.CreateMap<Play, ExportPlayDto>()
-            .ForMember(dest => dest.Rating, 
-            opt => opt.MapFrom(src => src.Rating == 0 ? "Premier" : src.Rating.ToString()));
+            this.CreateMap<Play, ExportPlayDto>();
         }
     }
 }

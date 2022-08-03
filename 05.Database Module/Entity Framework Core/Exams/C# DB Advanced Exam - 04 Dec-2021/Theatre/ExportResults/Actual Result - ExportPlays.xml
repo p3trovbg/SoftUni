@@ -58,7 +58,7 @@
       <Actor FullName="Maddalena Masterson" MainCharacter="Plays main character in 'Hedda Gabler'." />
     </Actors>
   </Play>
-  <Play Title="Life With Father" Duration="04:21:00" Rating="0" Genre="Comedy">
+  <Play Title="Life With Father" Duration="04:21:00" Rating="Premier" Genre="Comedy">
     <Actors>
       <Actor FullName="Wren O'Noland" MainCharacter="Plays main character in 'Life With Father'." />
       <Actor FullName="Debra Leeder" MainCharacter="Plays main character in 'Life With Father'." />
@@ -113,7 +113,7 @@
       <Actor FullName="Annabel Elvidge" MainCharacter="Plays main character in 'Stuff Happens'." />
     </Actors>
   </Play>
-  <Play Title="Tartuffe" Duration="02:45:00" Rating="0" Genre="Drama">
+  <Play Title="Tartuffe" Duration="02:45:00" Rating="Premier" Genre="Drama">
     <Actors>
       <Actor FullName="Leupold Prenty" MainCharacter="Plays main character in 'Tartuffe'." />
       <Actor FullName="Legra Strong" MainCharacter="Plays main character in 'Tartuffe'." />
@@ -141,7 +141,7 @@
       <Actor FullName="Cindelyn Mance" MainCharacter="Plays main character in 'Three Kingdoms'." />
     </Actors>
   </Play>
-  <Play Title="Uncle Vanya" Duration="03:10:00" Rating="0" Genre="Drama">
+  <Play Title="Uncle Vanya" Duration="03:10:00" Rating="Premier" Genre="Drama">
     <Actors>
       <Actor FullName="Zorana Kitcat" MainCharacter="Plays main character in 'Uncle Vanya'." />
       <Actor FullName="Torrin Darke" MainCharacter="Plays main character in 'Uncle Vanya'." />
