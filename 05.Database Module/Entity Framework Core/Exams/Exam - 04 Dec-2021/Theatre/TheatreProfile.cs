@@ -15,22 +15,23 @@
             this.CreateMap<ImportCastDto, Cast>();
             this.CreateMap<ImportTheatreDto, Theatre>();
             this.CreateMap<ImportTicketDto, Ticket>();
-
             this.CreateMap<Ticket, ExportTicketDto>();
             this.CreateMap<Theatre, ExportTheatreDto>()
                 .ForMember(d => d.TotalInCome,
                 t => t.MapFrom(x => x.Tickets
                             .Where(x => x.RowNumber >= 1 && x.RowNumber <= 5)
                             .Sum(x => x.Price)))
-                .ForMember(d => d.Tickets, 
+                .ForMember(d => d.Tickets,
                 t => t.MapFrom(x => x.Tickets
                 .Where(x => x.RowNumber >= 1 && x.RowNumber <= 5)
+                .ToList()
                 .OrderByDescending(x => x.Price)));
 
             this.CreateMap<Cast, ExportActorDto>();
             this.CreateMap<Play, ExportPlayDto>()
             .ForMember(dest => dest.Rating, 
-            opt => opt.MapFrom(src => src.Rating == 0 ? "Premier" : src.Rating.ToString()));
+            opt => opt.MapFrom(t => 
+                    t.Rating == 0 ? "Premier" : t.Rating.ToString()));
         }
     }
 }

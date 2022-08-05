@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
-using Theatre.Data.Models.Enums;
-
-namespace Theatre.DataProcessor.ExportDto
+﻿namespace Theatre.DataProcessor.ExportDto
 {
+    using System.Collections.Generic;
+    using System.Xml.Serialization;
+
     [XmlType("Play")]
     public class ExportPlayDto
     {

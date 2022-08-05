@@ -17,20 +17,18 @@
         {
             var theatres = context.Theatres
                      .Where(x => x.NumberOfHalls >= numbersOfHalls &&
-                                 x.Tickets.Count > 20);
+                                 x.Tickets.Count > 20)
+                    .ProjectTo<ExportTheatreDto>()
+                    .OrderByDescending(x => x.NumberOfHalls)
+                    .ThenBy(x => x.Name)
+                    .ToList();
 
-            var result = theatres.ProjectTo<ExportTheatreDto>()
-                     .OrderByDescending(x => x.NumberOfHalls)
-                     .ThenBy(x => x.Name)
-                     .ToArray();
-
-            return JsonConvert.SerializeObject(result, Formatting.Indented);
+            return JsonConvert.SerializeObject(theatres, Formatting.Indented);
         }
 
         public static string ExportPlays(TheatreContext context, double rating)
         {
             var plays = context.Plays
-                .ToList()
                 .Where(x => x.Rating <= rating)
                 .Select(x => new ExportPlayDto
                 {
@@ -39,7 +37,6 @@
                     Rating = x.Rating.ToString(),
                     Genre = x.Genre.ToString(),
                     Actors = x.Casts
-                            .ToList()
                             .Where(x => x.IsMainCharacter)
                             .Select(a => new ExportActorDto
                             {
@@ -54,7 +51,6 @@
                 .ThenByDescending(x => x.Genre)
                 .ToList();
 
-
             return Serialize<List<ExportPlayDto>>(plays, "Plays");
         }
 
@@ -63,6 +59,7 @@
             var sb = new StringBuilder();
             var name = new XmlRootAttribute(rootName);
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(String.Empty, String.Empty);
             var serializer = new XmlSerializer(typeof(T), name);
             

@@ -17,6 +17,6 @@ namespace Theatre.DataProcessor.ExportDto
         [JsonProperty("TotalIncome")]
         public decimal TotalInCome { get; set; }
 
-        public ICollection<ExportTicketDto> Tickets { get; set; }
+        public List<ExportTicketDto> Tickets { get; set; }
     }
 }

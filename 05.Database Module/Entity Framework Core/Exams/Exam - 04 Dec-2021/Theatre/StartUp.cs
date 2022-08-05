@@ -16,11 +16,11 @@
 
             Mapper.Initialize(config => config.AddProfile<TheatreProfile>());
 
-            ResetDatabase(context, shouldDropDatabase: true);
+           // ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
 
-            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
+            //ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
             ExportEntities(context, projectDir + @"ExportResults/");
 
