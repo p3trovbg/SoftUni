@@ -34,7 +34,7 @@
                 {
                     Title = x.Title,
                     Duration = x.Duration.ToString(@"hh\:mm\:ss"),
-                    Rating = x.Rating.ToString(),
+                    Rating = x.Rating == 0 ? "Premier" : x.Rating.ToString(),
                     Genre = x.Genre.ToString(),
                     Actors = x.Casts
                             .Where(x => x.IsMainCharacter)
