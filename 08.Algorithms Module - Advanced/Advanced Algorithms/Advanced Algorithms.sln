@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Dijkstra's Algorithm", "01. Dijkstra's Algorithm\01. Dijkstra's Algorithm.csproj", "{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Kruskal's Algorithm", "02. Kruskal's Algorithm\02. Kruskal's Algorithm.csproj", "{F4AE2671-9158-4C6F-A6F0-844015B91B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Prim's Algorithm", "03. Prim's Algorithm\03. Prim's Algorithm.csproj", "{D52CA304-3981-4E2F-8307-1BAC333F15B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4AE2671-9158-4C6F-A6F0-844015B91B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4AE2671-9158-4C6F-A6F0-844015B91B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4AE2671-9158-4C6F-A6F0-844015B91B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4AE2671-9158-4C6F-A6F0-844015B91B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52CA304-3981-4E2F-8307-1BAC333F15B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52CA304-3981-4E2F-8307-1BAC333F15B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52CA304-3981-4E2F-8307-1BAC333F15B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52CA304-3981-4E2F-8307-1BAC333F15B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
+	EndGlobalSection
+EndGlobal
