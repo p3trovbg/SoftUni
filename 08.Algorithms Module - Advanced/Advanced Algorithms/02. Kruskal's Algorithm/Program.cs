@@ -71,7 +71,6 @@ namespace _02._Kruskal_s_Algorithm
             }
 
             PrintResult();
-
         }
 
         private static void PrintResult()
