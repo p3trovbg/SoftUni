@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Bellman-Ford's Algorith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Longest path in DAG", "05. Longest path in DAG\05. Longest path in DAG.csproj", "{10764C45-87AE-470A-A15D-EB128D940C23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Most Reliable Path", "06. Most Reliable Path\06. Most Reliable Path.csproj", "{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{10764C45-87AE-470A-A15D-EB128D940C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10764C45-87AE-470A-A15D-EB128D940C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10764C45-87AE-470A-A15D-EB128D940C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
