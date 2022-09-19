@@ -9,13 +9,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Kruskal's Algorithm", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Prim's Algorithm", "03. Prim's Algorithm\03. Prim's Algorithm.csproj", "{D52CA304-3981-4E2F-8307-1BAC333F15B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Bellman-Ford's Algorithm", "04. Bellman-Ford's Algorithm\04. Bellman-Ford's Algorithm.csproj", "{97E51533-D364-4765-9BF1-152D8B9C85B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Bellman-Ford's Algorithm", "04. Bellman-Ford's Algorithm\04. Bellman-Ford's Algorithm.csproj", "{97E51533-D364-4765-9BF1-152D8B9C85B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Longest path in DAG", "05. Longest path in DAG\05. Longest path in DAG.csproj", "{10764C45-87AE-470A-A15D-EB128D940C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Longest path in DAG", "05. Longest path in DAG\05. Longest path in DAG.csproj", "{10764C45-87AE-470A-A15D-EB128D940C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Most Reliable Path", "06. Most Reliable Path\06. Most Reliable Path.csproj", "{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Most Reliable Path", "06. Most Reliable Path\06. Most Reliable Path.csproj", "{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Cheap Town Tour", "07. Cheap Town Tour\07. Cheap Town Tour.csproj", "{D789C026-6411-4304-B3BC-EC7A3CFEDA62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Cheap Town Tour", "07. Cheap Town Tour\07. Cheap Town Tour.csproj", "{D789C026-6411-4304-B3BC-EC7A3CFEDA62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Undefined", "08. Undefined\08. Undefined.csproj", "{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Dijkstra and MST", "01.Dijkstra and MST", "{6D2CCCB2-C1C6-422A-A119-71D0853C508E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Graphs Bellman-Ford, Longest Path in (DAG)", "02.Graphs Bellman-Ford, Longest Path in (DAG)", "{7876A877-B527-4A48-A0AD-01E1C9B4F092}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Dijkstra, MST, Longest path in DAG and Bellman-Ford Exercises", "03. Dijkstra, MST, Longest path in DAG and Bellman-Ford Exercises", "{CD7A1DB9-94A7-4621-B211-36E357A86FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Big Trip", "09. Big Trip\09. Big Trip.csproj", "{649B47E5-46F1-4033-A513-598F2B4F2B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Cable Network", "05. Cable Network\10. Cable Network.csproj", "{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +63,33 @@ Global
 		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649B47E5-46F1-4033-A513-598F2B4F2B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649B47E5-46F1-4033-A513-598F2B4F2B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649B47E5-46F1-4033-A513-598F2B4F2B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649B47E5-46F1-4033-A513-598F2B4F2B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF55CB5E-A3D3-47C3-B666-3ECB5A81D5C3} = {6D2CCCB2-C1C6-422A-A119-71D0853C508E}
+		{F4AE2671-9158-4C6F-A6F0-844015B91B16} = {6D2CCCB2-C1C6-422A-A119-71D0853C508E}
+		{D52CA304-3981-4E2F-8307-1BAC333F15B6} = {6D2CCCB2-C1C6-422A-A119-71D0853C508E}
+		{97E51533-D364-4765-9BF1-152D8B9C85B5} = {7876A877-B527-4A48-A0AD-01E1C9B4F092}
+		{10764C45-87AE-470A-A15D-EB128D940C23} = {7876A877-B527-4A48-A0AD-01E1C9B4F092}
+		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
+		{D789C026-6411-4304-B3BC-EC7A3CFEDA62} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
+		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
+		{649B47E5-46F1-4033-A513-598F2B4F2B0F} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
+		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
