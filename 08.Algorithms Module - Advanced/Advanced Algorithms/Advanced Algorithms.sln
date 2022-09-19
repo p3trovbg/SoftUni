@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Longest path in DAG", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Most Reliable Path", "06. Most Reliable Path\06. Most Reliable Path.csproj", "{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Cheap Town Tour", "07. Cheap Town Tour\07. Cheap Town Tour.csproj", "{D789C026-6411-4304-B3BC-EC7A3CFEDA62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFA0196C-4B2A-4225-AC54-45D00F5B0BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D789C026-6411-4304-B3BC-EC7A3CFEDA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_02._Kruskal_s_Algorithm</RootNamespace>
+    <RootNamespace>_07._Cheap_Town_Tour</RootNamespace>
   </PropertyGroup>
 
 </Project>

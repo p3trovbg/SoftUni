@@ -1,8 +1,8 @@
-﻿namespace _01._Dijkstra_s_Algorithm
+﻿namespace _01.Dijkstra_s_Algorithm
 {
     using System;
-    using System.Linq;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class Edge
     {
@@ -49,8 +49,8 @@
             Array.Fill(distances, double.PositiveInfinity);
             Array.Fill(parents, -1);
 
-            int startNode = int.Parse(Console.ReadLine());
-            int endNode = int.Parse(Console.ReadLine());
+            int startNode = int.Parse(s: Console.ReadLine());
+            int endNode = int.Parse(s: Console.ReadLine());
 
             distances[startNode] = 0;
 
@@ -126,7 +126,7 @@
         {
             for (int i = 0; i < nodeCount; i++)
             {
-                var nodeInfo = Console.ReadLine()
+                int[] nodeInfo = Console.ReadLine()
                     .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse)
                     .ToArray();
@@ -139,7 +139,7 @@
                 {
                     First = firstNode,
                     Second = secondNode,
-                    Weight = weight
+                    Weight = weight,
                 };
 
                 if (!nodes.ContainsKey(firstNode))
