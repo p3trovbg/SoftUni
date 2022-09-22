@@ -48,6 +48,14 @@ Here, you can find many exercises from my education path at SoftUni.
 </tr>
 <tr>
     <td>
+		<a href="https://softuni.bg/certificates/details/141227/f013045c" target="_blank" rel="noreferrer"> 
+		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>Entity Framework Core</h3>
+	</a>
+	</td>
+</tr>
+<tr>
+    <td>
 		 <a href="https://softuni.bg/certificates/details/133543/f30ff3db" target="_blank" rel="noreferrer"> 
 		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
          <h3>Data Structure Module</h3>
