@@ -25,9 +25,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Graphs Bellman-Ford, Lon
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Dijkstra, MST, Longest path in DAG and Bellman-Ford Exercises", "03. Dijkstra, MST, Longest path in DAG and Bellman-Ford Exercises", "{CD7A1DB9-94A7-4621-B211-36E357A86FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Big Trip", "09. Big Trip\09. Big Trip.csproj", "{649B47E5-46F1-4033-A513-598F2B4F2B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Big Trip", "09. Big Trip\09. Big Trip.csproj", "{649B47E5-46F1-4033-A513-598F2B4F2B0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Cable Network", "05. Cable Network\10. Cable Network.csproj", "{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Graphs Strongly Connected Components, Max Flow - Lab", "04. Graphs Strongly Connected Components, Max Flow - Lab", "{A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Strongly Connected Components", "11. Strongly Connected Components\11. Strongly Connected Components.csproj", "{6C2994EC-D736-4021-B2FD-C2C03FB11664}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2994EC-D736-4021-B2FD-C2C03FB11664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2994EC-D736-4021-B2FD-C2C03FB11664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2994EC-D736-4021-B2FD-C2C03FB11664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2994EC-D736-4021-B2FD-C2C03FB11664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,7 @@ Global
 		{60F2EF3D-C09F-48C8-83D2-A3A3E60384E2} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
 		{649B47E5-46F1-4033-A513-598F2B4F2B0F} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
 		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
+		{6C2994EC-D736-4021-B2FD-C2C03FB11664} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
