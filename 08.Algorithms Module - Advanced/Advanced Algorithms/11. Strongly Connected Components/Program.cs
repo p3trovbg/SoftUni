@@ -41,7 +41,7 @@ namespace _11._Strongly_Connected_Components
             Console.WriteLine("Strongly Connected Components:");
             foreach (var component in connectedComponents)
             {
-                Console.WriteLine($"{{{string.Join(" ", component)}}}");
+                Console.WriteLine($"{{{string.Join(", ", component)}}}");
             }
         }
 
