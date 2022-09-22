@@ -6,10 +6,6 @@ Here, you can find many exercises from my education path at SoftUni.
 
 <h3 align="left">Certifactes:</h3>
 <table>
-  <tr>
-	<th></th>
-    <th>Certificate</th>
-  </tr>
     <td>
 		<a href="https://softuni.bg/certificates/details/100273/0b43e777" target="_blank" rel="noreferrer"> 
 		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
