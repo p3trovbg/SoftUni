@@ -27,14 +27,13 @@ namespace _13._Articulation_Points
             lowpoint = new int[nodes];
             articulationPoints = new List<int>();
 
-            //for (int node = 0; node < graph.Length; node++)
-            //{
-            //    if (!visited[node])
-            //    {
-            //        DFS(node, 1);
-            //    }
-            //}
-            DFS(5, 1);
+            for (int node = 0; node < graph.Length; node++)
+            {
+                if (!visited[node])
+                {
+                    DFS(node, 1);
+                }
+            }
 
             Console.WriteLine($"Articulation points: {string.Join(", ", articulationPoints)}");
         }
@@ -69,7 +68,7 @@ namespace _13._Articulation_Points
                 }
             }
 
-            if(isArticulationPoint && parents[node] != -1 ||
+            if (isArticulationPoint && parents[node] != -1 ||
                 parents[node] == -1 && children > 1)
             {
                 articulationPoints.Add(node);
