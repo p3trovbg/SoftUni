@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11. Strongly Connected Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Max Flow", "12. Max Flow\12. Max Flow.csproj", "{0FB029FC-4B6F-4979-8999-087AF45AB0A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Articulation Points", "13. Articulation Points\13. Articulation Points.csproj", "{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{0FB029FC-4B6F-4979-8999-087AF45AB0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB029FC-4B6F-4979-8999-087AF45AB0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB029FC-4B6F-4979-8999-087AF45AB0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{845E8FFC-7D35-4C53-B83E-6CB9C5CF0D29} = {CD7A1DB9-94A7-4621-B211-36E357A86FE2}
 		{6C2994EC-D736-4021-B2FD-C2C03FB11664} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 		{0FB029FC-4B6F-4979-8999-087AF45AB0A0} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
+		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
