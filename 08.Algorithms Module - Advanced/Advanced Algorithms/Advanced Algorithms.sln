@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13. Articulation Points", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Electrical Substation Network", "14. Electrical Substation Network\14. Electrical Substation Network.csproj", "{DBB4C996-8347-4C83-9385-A98D4907D92E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Maximum Tasks Assignment", "15. Maximum Tasks Assignment\15. Maximum Tasks Assignment.csproj", "{9B99B113-B4E4-4D38-8346-822E801FD964}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{DBB4C996-8347-4C83-9385-A98D4907D92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB4C996-8347-4C83-9385-A98D4907D92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB4C996-8347-4C83-9385-A98D4907D92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B99B113-B4E4-4D38-8346-822E801FD964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B99B113-B4E4-4D38-8346-822E801FD964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B99B113-B4E4-4D38-8346-822E801FD964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B99B113-B4E4-4D38-8346-822E801FD964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{0FB029FC-4B6F-4979-8999-087AF45AB0A0} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 		{0DE42766-D5C5-44FA-A05D-C3B43E07AEEB} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 		{DBB4C996-8347-4C83-9385-A98D4907D92E} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
+		{9B99B113-B4E4-4D38-8346-822E801FD964} = {A121B2C9-4DE2-4DA4-A0D1-15C4A054F0F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
