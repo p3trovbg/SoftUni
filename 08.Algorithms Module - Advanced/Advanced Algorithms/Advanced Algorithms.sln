@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. Knapsack", "16. Knapsac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17. Longest Increasing Subsequence", "17. Longest Increasing Subsequence\17. Longest Increasing Subsequence.csproj", "{6F04A7D1-F3D7-4AA4-A61A-8697B3BE339B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Cable Merchant", "18. Cable Merchant\18. Cable Merchant.csproj", "{BDEDE5EB-5C13-4402-9239-EF6C4CC65669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Battle Points", "19. Battle Points\19. Battle Points.csproj", "{734C2A0B-A257-471A-A36A-57FFD2E628CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +131,14 @@ Global
 		{6F04A7D1-F3D7-4AA4-A61A-8697B3BE339B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F04A7D1-F3D7-4AA4-A61A-8697B3BE339B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F04A7D1-F3D7-4AA4-A61A-8697B3BE339B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEDE5EB-5C13-4402-9239-EF6C4CC65669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEDE5EB-5C13-4402-9239-EF6C4CC65669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEDE5EB-5C13-4402-9239-EF6C4CC65669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEDE5EB-5C13-4402-9239-EF6C4CC65669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734C2A0B-A257-471A-A36A-57FFD2E628CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734C2A0B-A257-471A-A36A-57FFD2E628CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734C2A0B-A257-471A-A36A-57FFD2E628CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734C2A0B-A257-471A-A36A-57FFD2E628CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,6 +162,8 @@ Global
 		{81B744E1-33EF-4104-952C-05545F29CD8F} = {EC8D2E0A-6288-4324-B960-B1748E5DFD9C}
 		{1AB77DEB-0A05-456E-BC92-A881E0B8EDC0} = {EC8D2E0A-6288-4324-B960-B1748E5DFD9C}
 		{6F04A7D1-F3D7-4AA4-A61A-8697B3BE339B} = {EC8D2E0A-6288-4324-B960-B1748E5DFD9C}
+		{BDEDE5EB-5C13-4402-9239-EF6C4CC65669} = {EC8D2E0A-6288-4324-B960-B1748E5DFD9C}
+		{734C2A0B-A257-471A-A36A-57FFD2E628CF} = {EC8D2E0A-6288-4324-B960-B1748E5DFD9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68A5E1A3-3FC9-4049-BD95-082628E8C90D}
