@@ -51,7 +51,7 @@ namespace _19._Battle_Points
 
                 for (int capacity = 1; capacity < table.GetLength(1); capacity++)
                 {
-                    if(capacity < enemy.Energy)
+                    if (capacity < enemy.Energy)
                     {
                         table[row, capacity] = table[row - 1, capacity];
                     }

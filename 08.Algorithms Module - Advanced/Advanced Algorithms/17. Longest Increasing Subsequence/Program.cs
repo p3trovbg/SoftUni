@@ -29,12 +29,12 @@ namespace _17._Longest_Increasing_Subsequence
                 for (int prevIdx = currentElementIdx - 1; prevIdx >= 0; prevIdx--)
                 {
                     var previousElement = numbers[prevIdx];
-                    var previousLength = len[prevIdx];
+                    var previousLength = len[prevIdx] + 1;
 
                     if (currentElement > previousElement &&
-                       currentLength <= previousLength + 1)
+                       currentLength <= previousLength)
                     {
-                        currentLength = previousLength + 1;
+                        currentLength = previousLength;
                         currentPrev = prevIdx;
                     }
                 }
