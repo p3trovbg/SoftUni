@@ -58,7 +58,7 @@ namespace _02._Chain_Lightning
                 Prim(neighborhood, damage);
 
             }
-                Console.WriteLine(damagesByNeighborhoods.Max());
+            Console.WriteLine(damagesByNeighborhoods.Max());
         }
 
         private static void Prim(int neighborhood, int damage)
@@ -84,7 +84,7 @@ namespace _02._Chain_Lightning
                     parentNode = minNode.First;
                 }
 
-                if(tree.Contains(minNode.Second) &&
+                if (tree.Contains(minNode.Second) &&
                    !tree.Contains(minNode.First))
                 {
                     newNode = minNode.First;

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Tour de Sofia", "01. To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Chain Lightning", "02. Chain Lightning\02. Chain Lightning.csproj", "{FA267E1E-156D-4863-BF71-6E973FB729EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Road Trip", "03. Road Trip\03. Road Trip.csproj", "{543133BF-5CB4-4A46-8688-5B518D3F9E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FA267E1E-156D-4863-BF71-6E973FB729EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA267E1E-156D-4863-BF71-6E973FB729EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA267E1E-156D-4863-BF71-6E973FB729EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543133BF-5CB4-4A46-8688-5B518D3F9E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543133BF-5CB4-4A46-8688-5B518D3F9E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543133BF-5CB4-4A46-8688-5B518D3F9E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543133BF-5CB4-4A46-8688-5B518D3F9E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
