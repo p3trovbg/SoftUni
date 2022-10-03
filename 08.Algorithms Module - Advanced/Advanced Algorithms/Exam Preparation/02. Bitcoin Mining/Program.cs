@@ -69,7 +69,7 @@ namespace _02._Bitcoin_Mining
 
             int currentRow = table.GetLength(0) - 1;
             int col = table.GetLength(1) - 1;
-            var selectedItems = new List<string>();
+            var selectedTransactions = new List<string>();
             var totalSize = 0;
 
             while (currentRow > 0 && col > 0)
@@ -78,7 +78,7 @@ namespace _02._Bitcoin_Mining
                 {
                     var transaction = transactions[currentRow - 1];
 
-                    selectedItems.Add(transaction.Hash);
+                    selectedTransactions.Add(transaction.Hash);
                     totalSize += transaction.Size;
 
                     col -= transaction.Size;
@@ -89,7 +89,7 @@ namespace _02._Bitcoin_Mining
 
             Console.WriteLine($"Total Size: {totalSize}");
             Console.WriteLine($"Total Fees: {table[transactionCount, maxCapacity]}");
-            foreach (var transaction in selectedItems)
+            foreach (var transaction in selectedTransactions)
             {
                 Console.WriteLine(transaction);
             }
