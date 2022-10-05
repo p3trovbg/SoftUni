@@ -5,15 +5,25 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Tour de Sofia", "01. Tour de Sofia\01. Tour de Sofia.csproj", "{843A09B9-7B7D-4CB6-B053-F767E03E5D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Chain Lightning", "02. Chain Lightning\02. Chain Lightning.csproj", "{FA267E1E-156D-4863-BF71-6E973FB729EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Chain Lightning", "02. Chain Lightning\02. Chain Lightning.csproj", "{FA267E1E-156D-4863-BF71-6E973FB729EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Road Trip", "03. Road Trip\03. Road Trip.csproj", "{543133BF-5CB4-4A46-8688-5B518D3F9E21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Road Trip", "03. Road Trip\03. Road Trip.csproj", "{543133BF-5CB4-4A46-8688-5B518D3F9E21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Dora the Explorer", "01. Dora the Explorer\01. Dora the Explorer.csproj", "{92731A70-7E8B-40B8-8C7B-0AE081DFEB9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Dora the Explorer", "01. Dora the Explorer\01. Dora the Explorer.csproj", "{92731A70-7E8B-40B8-8C7B-0AE081DFEB9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Bitcoin Mining", "02. Bitcoin Mining\02. Bitcoin Mining.csproj", "{41C13092-8C1C-4408-8101-73552110A065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Bitcoin Mining", "02. Bitcoin Mining\02. Bitcoin Mining.csproj", "{41C13092-8C1C-4408-8101-73552110A065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. The Boring Company", "03. The Boring Company\03. The Boring Company.csproj", "{086C76FD-5003-41BA-8A51-5EF4D1D8796B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. The Boring Company", "03. The Boring Company\03. The Boring Company.csproj", "{086C76FD-5003-41BA-8A51-5EF4D1D8796B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Best Team", "01. Best Team\01. Best Team.csproj", "{8AA0A824-234C-4B33-AD68-877D895B8AFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Pipelines", "02. Pipelines\02. Pipelines.csproj", "{7FE13F8C-2A98-4818-B641-A71056450500}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Travel Optimizer", "03. Travel Optimizer\03. Travel Optimizer.csproj", "{10DEC744-4B69-4642-B39A-8FE008EE82D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Black Friday", "01. Black Friday\01. Black Friday.csproj", "{6B1F9CED-0FAB-40C0-B4A5-0625CEC93042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Boxes", "02. Boxes\02. Boxes.csproj", "{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +55,26 @@ Global
 		{086C76FD-5003-41BA-8A51-5EF4D1D8796B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{086C76FD-5003-41BA-8A51-5EF4D1D8796B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{086C76FD-5003-41BA-8A51-5EF4D1D8796B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA0A824-234C-4B33-AD68-877D895B8AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA0A824-234C-4B33-AD68-877D895B8AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA0A824-234C-4B33-AD68-877D895B8AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA0A824-234C-4B33-AD68-877D895B8AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE13F8C-2A98-4818-B641-A71056450500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE13F8C-2A98-4818-B641-A71056450500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE13F8C-2A98-4818-B641-A71056450500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE13F8C-2A98-4818-B641-A71056450500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DEC744-4B69-4642-B39A-8FE008EE82D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DEC744-4B69-4642-B39A-8FE008EE82D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DEC744-4B69-4642-B39A-8FE008EE82D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DEC744-4B69-4642-B39A-8FE008EE82D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1F9CED-0FAB-40C0-B4A5-0625CEC93042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1F9CED-0FAB-40C0-B4A5-0625CEC93042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1F9CED-0FAB-40C0-B4A5-0625CEC93042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1F9CED-0FAB-40C0-B4A5-0625CEC93042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

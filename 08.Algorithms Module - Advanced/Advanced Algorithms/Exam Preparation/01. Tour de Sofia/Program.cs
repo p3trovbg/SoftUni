@@ -86,6 +86,7 @@ namespace _01._Tour_de_Sofia
                     
                     if (newDistance < distances[edge.To])
                     {
+                        
                         distances[edge.To] = newDistance;
 
                         priorityQueue 
