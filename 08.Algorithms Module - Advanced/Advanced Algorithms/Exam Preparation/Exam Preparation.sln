@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Black Friday", "01. Bla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Boxes", "02. Boxes\02. Boxes.csproj", "{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Emergency Plan", "03. Emergency Plan\03. Emergency Plan.csproj", "{FB72C9ED-566C-4645-9A10-5C293C6EB381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F44F76DD-7745-4C1B-9CB7-08E35B3BFC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB72C9ED-566C-4645-9A10-5C293C6EB381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB72C9ED-566C-4645-9A10-5C293C6EB381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB72C9ED-566C-4645-9A10-5C293C6EB381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB72C9ED-566C-4645-9A10-5C293C6EB381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
