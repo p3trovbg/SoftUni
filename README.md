@@ -72,6 +72,14 @@ Here, you can find many exercises from my education path at SoftUni.
 </tr>
 <tr>
     <td>
+		 <a href="https://softuni.bg/certificates/details/146657/c7fa1319" target="_blank" rel="noreferrer"> 
+		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>ASP.NET Fundamentals Module</h3>
+		</a>
+	</td>
+</tr>
+<tr>
+    <td>
 		  <a href="https://softuni.bg/certificates/details/126454/0262ddda" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" 
          <h3>JS Advanced Module</h3>
