@@ -3,7 +3,15 @@
 </a>
 
 Here, you can find many exercises from my education path at SoftUni.
-
+<h1>Diploma</h1>
+<tr>
+    <td>
+		<a href="https://softuni.bg/certificates/details/153467/db021bfa" target="_blank" rel="noreferrer"> 
+		<img src="https://softuni.bg/Content/images/university/professions/csharp.svg" alt="csharp" width="40" height="40" 
+			 <h3>C# Web Developer</h3>
+		</a>
+	</td>
+</tr>
 <h1>Certificates</h1>
 <table>
 <tr>
