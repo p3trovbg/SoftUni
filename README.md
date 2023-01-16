@@ -3,8 +3,16 @@
 </a>
 
 Here, you can find many exercises from my education path at SoftUni.
-
-<h3 align="left">Certifactes:</h3>
+<h1>Diploma</h1>
+<tr>
+    <td>
+		<a href="https://softuni.bg/certificates/details/153467/db021bfa" target="_blank" rel="noreferrer"> 
+		<img src="https://softuni.bg/Content/images/university/professions/csharp.svg" alt="csharp" width="40" height="40" 
+			 <h3>C# Web Developer</h3>
+		</a>
+	</td>
+</tr>
+<h1>Certificates</h1>
 <table>
 <tr>
     <td>
@@ -67,6 +75,22 @@ Here, you can find many exercises from my education path at SoftUni.
 		 <a href="https://softuni.bg/certificates/details/142505/7b334d3d" target="_blank" rel="noreferrer"> 
 		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
          <h3>Algorithms Advanced Module</h3>
+		</a>
+	</td>
+</tr>
+<tr>
+    <td>
+		 <a href="https://softuni.bg/certificates/details/146657/c7fa1319" target="_blank" rel="noreferrer"> 
+		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>ASP.NET Core Fundamentals Module</h3>
+		</a>
+	</td>
+</tr>
+<tr>
+    <td>
+		 <a href="https://softuni.bg/certificates/details/152373/283c74b5" target="_blank" rel="noreferrer"> 
+		<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" 
+         <h3>ASP.NET Core Advanced Module</h3>
 		</a>
 	</td>
 </tr>
